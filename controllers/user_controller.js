@@ -6,8 +6,9 @@ module.exports.profile=function(req,res){
             if(user){
                 return res.render('user_profile',{
                     title:'User profile',
-                    user:user
-                })
+                    user:user,
+                    opr:'Log Out',
+                });
             }
         })
      }else{
