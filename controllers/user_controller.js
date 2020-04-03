@@ -32,14 +32,15 @@ module.exports.create=function(req,res){
         if(!user){
                  User.create(req.body,function(err,user){
                      if(err){console.log('error in creating user while signing Up');return;}
-                     return res.redirect('/users/signin');
+                     return res.redirect('/users/sign-in');
                  })
         }else{ return res.redirect('back');}
         })
 }
 
-//sign in nad create the session for the user
+//sign in and create the session for the user
 
-module.exports.createsession=function(req,res){
+module.exports.createSession=function(req,res){
     //later on
+    return res.redirect('/');
 }
