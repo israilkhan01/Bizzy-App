@@ -8,13 +8,17 @@ module.exports.profile=function(req,res){
 }
 //these are actions
 module.exports.signIn=function(req,res){
-
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile')
+    }
     return res.render('user_signin',{
         title:"Bizzy | SignIn"
     })
 }
 module.exports.signUp=function(req,res){
-
+    if(req.isAuthenticated()){
+       return res.redirect('/users/profile')
+    }
     return res.render('user_signup',{
         title:"Bizzy | SignUp"
     })
