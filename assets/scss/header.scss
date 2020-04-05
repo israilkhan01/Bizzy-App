@@ -1,5 +1,26 @@
+$primary-color:#003923;
 header{
-    background-color: black;
+    background-color: $primary-color;
+    .headers{
     font-family: sans-serif;
-    color: wheat;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 10px;
+    justify-content: space-between;
+        div{
+            display: inline-flex;
+            h2{
+                border: white 1px solid;
+            }
+        }
+        ul
+        {
+             margin-right: 10px;
+            a{
+                color: white;
+            }
+        }
+ }
 }

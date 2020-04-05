@@ -1,4 +1,18 @@
 header {
-  background-color: black;
-  font-family: sans-serif;
-  color: wheat; }
+  background-color: #003923; }
+  header .headers {
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 10px;
+    justify-content: space-between; }
+    header .headers div {
+      display: inline-flex; }
+      header .headers div h2 {
+        border: white 1px solid; }
+    header .headers ul {
+      margin-right: 10px; }
+      header .headers ul a {
+        color: white; }

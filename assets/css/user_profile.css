@@ -1,2 +1,4 @@
 body {
-  background-color: lightblue; }
+  background-color: white; }
+  body main {
+    margin: 10%; }

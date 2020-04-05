@@ -1,2 +1,4 @@
 footer {
-  background-color: yellow; }
+  background-color: grey;
+  margin-top: 50vh;
+  background-attachment: fixed; }
