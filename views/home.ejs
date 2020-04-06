@@ -1,6 +1,6 @@
 
 <h1> 
-     BizzY/<%=title%>
+     <%=title%>
 </h1>
 <section>
     <h3>POST</h3>
@@ -9,3 +9,11 @@
         <input type="submit" value="POST">
     </form>
 </section>
+
+<div>
+    <%for(post of posts){%>
+         <h4> <%=post.content%> </h4>
+         <p>post by: <%=post.user.name%> </p>
+        <%}%>
+      
+</div>
