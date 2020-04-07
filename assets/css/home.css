@@ -1,33 +1,35 @@
-#header header {
-  background-attachment: fixed;
-  position: relative; }
-
-.body main {
-  display: inline-flex; }
-  .body main #post-layout {
+main {
+  display: inline-block; }
+  main #post-layout {
     background-color: white;
-    margin-left: 15vw;
-    border: 2px black solid;
-    margin-block-start: 0; }
-    .body main #post-layout section {
-      background-color: black;
-      margin-top: -20px;
+    border: 0.1px #e9ebee solid;
+    margin: -9px; }
+    main #post-layout section {
+      background-color: #e9ebee;
       padding: 0; }
-      .body main #post-layout section h2 {
-        height: 40px;
-        margin-left: 10px;
-        color: white; }
-      .body main #post-layout section #new-post-form {
-        margin-top: -20;
+      main #post-layout section div h3 {
         margin-left: 10px; }
-        .body main #post-layout section #new-post-form #post-text {
+      main #post-layout section #new-post-form {
+        margin: 0;
+        margin-left: 20px; }
+        main #post-layout section #new-post-form #post-text {
           width: 80%;
           border-radius: 20px; }
-          .body main #post-layout section #new-post-form #post-text #post-text.type {
-            margin-top: 20px; }
-        .body main #post-layout section #new-post-form .post-submit {
-          border: 0;
-          margin-top: 7%;
-          border-radius: 2px; }
-          .body main #post-layout section #new-post-form .post-submit .post-submit:focus {
+          main #post-layout section #new-post-form #post-text #post-text:focus {
             outline: none; }
+        main #post-layout section #new-post-form .sub-post #post-submit {
+          background-color: black;
+          color: #e9ebee;
+          width: 50px;
+          padding: 0;
+          border: 0;
+          margin: 5px;
+          border-radius: 2px; }
+    main #post-layout .posts .post-s .post-content {
+      background-color: #e9ebee;
+      width: 80%;
+      border: 0.1px black solid;
+      border-radius: 5px; }
+    main #post-layout .posts .post-s .post-comments {
+      width: 80%;
+      background-color: #e9ebee; }

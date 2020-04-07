@@ -1,12 +1,12 @@
 body {
   margin: 0;
   background-color: lightgrey;
-  font-family: sans-serif,monospace; }
+  font-family: sans-serif; }
   body #header {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     z-index: 1; }
   body .body {
-    position: relative; }
-  body .footer {
-    position: sticky;
-    background-attachment: fixed; }
+    width: 50%;
+    display: inline-block;
+    left: 25%; }

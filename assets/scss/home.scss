@@ -1,54 +1,67 @@
-#header{
-    header{
-        background-attachment: fixed;
-    position: relative;
-    }
-}
-.body{
-    main{
-       display: inline-flex;
-    //    #title{
-    //        width: 100%;
-    //    }
-        #post-layout{
-             background-color: white;
-            //   width: 100%;
-              margin-left: 15vw;
-              border: 2px black solid;
-              margin-block-start: 0;
-             section{
-                background-color:black;
-                margin-top:-20px;
+
+main{
+    display: inline-block;
+    #post-layout{
+            background-color: white;
+            border: 0.1px #e9ebee solid;
+            
+            margin: -9px;
+            section{
+                background-color:#e9ebee;
                 padding: 0;
-                h2{ 
-                    
-                    height: 40px;
-                    margin-left: 10px;
-                     color: white;
+               
+                div{ 
+                   
+                    h3{ 
+                        
+                        margin-left: 10px;
+                    }
                  }
                 #new-post-form{
-                    margin-top: -20;
-                    margin-left: 10px;
+                    margin:0;
+                    margin-left: 20px;
                     #post-text{
                         width: 80%;
                         border-radius: 20px;
-                        #post-text.type{
-                           
-                            margin-top: 20px;
-                        }
-                    }
-                    .post-submit{
-                        border:0;
-                        margin-top:7%;
-                        border-radius: 2px;
-                        .post-submit:focus{
+                        #post-text:focus{
                             outline: none;
                         }
+                
+                    
+                    }
+                    .sub-post{
+                        
+                        #post-submit{
+                            background-color: black;
+                            color: #e9ebee;
+                            width: 50px;
+                            padding: 0;
+                            border:0;
+                            margin: 5px;
+                            border-radius: 2px;
+                        }
+                     }
+                
                 }
-                 
-                 }
-             }
-        }
-    }
+            }
 
+            .posts{
+               
+                .post-s{
+                    // background-color: #e9ebee;
+                    // border: 0.1px grey solid;
+                    .post-content{
+                        background-color: #e9ebee;
+                        width: 80%;
+                        border: 0.1px black solid;
+                        border-radius: 5px;
+                    }
+                    .post-comments{
+                        width: 80%;
+                        background-color:#e9ebee ;
+                    }
+                }
+            }
+    }
 }
+
