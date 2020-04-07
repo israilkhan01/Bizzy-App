@@ -2,6 +2,9 @@ $primary-color:#003923;
 header{
     margin: 0;
     background-color: $primary-color;
+    border-bottom:1px lightgrey solid;
+    background-attachment: fixed;
+    position: static;
     .headers{
     font-family: sans-serif;
     color: white;

@@ -1,6 +1,9 @@
 header {
   margin: 0;
-  background-color: #003923; }
+  background-color: #003923;
+  border-bottom: 1px lightgrey solid;
+  background-attachment: fixed;
+  position: static; }
   header .headers {
     font-family: sans-serif;
     color: white;
