@@ -3,57 +3,14 @@ body{
     background-color: lightgrey;
     font-family: sans-serif,monospace;
     #header{
-        header{
-            background-attachment: fixed;
-        position: relative;
-        }
+        position: sticky;
+        z-index: 1;
     }
     .body{
-        main{
-           display: inline-flex;
-        //    #title{
-        //        width: 100%;
-        //    }
-            #post-layout{
-                 background-color: white;
-                //   width: 100%;
-                  margin-left: 15vw;
-                  border: 2px black solid;
-                  margin-block-start: 0;
-                 section{
-                    background-color:black;
-                    margin-top:-20px;
-                    padding: 0;
-                    h2{ 
-                        
-                        height: 40px;
-                        margin-left: 10px;
-                         color: white;
-                     }
-                    #new-post-form{
-                        margin-top: -20;
-                        margin-left: 10px;
-                        #post-text{
-                            width: 80%;
-                            border-radius: 20px;
-                            #post-text.type{
-                               
-                                margin-top: 20px;
-                            }
-                        }
-                        .post-submit{
-                            border:0;
-                            margin-top:7%;
-                            border-radius: 2px;
-                            .post-submit:focus{
-                                outline: none;
-                            }
-                    }
-                     
-                     }
-                 }
-            }
-        }
-
+        position: relative;
+    }
+    .footer{
+        position: sticky;
+        background-attachment: fixed;
     }
 }
