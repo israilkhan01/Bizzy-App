@@ -86,12 +86,17 @@ main{
                         .post-comments-list{
                             li{
                                 small{
-                                    color: green;
+                                    color: #003923;
                                     background-color:#e9ebee;
-                                    border: 0.1px solid black;
                                     padding: 5px;
+                                    border-radius: 5px;
                                 }
                               
+                            }
+                            .comment-content{
+                                background-color:#e9ebee;
+                                padding: 7px;
+                                border-radius: 5px;
                             }
                         }
                     }

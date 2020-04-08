@@ -20,13 +20,16 @@
             <ul>
             <%for(post of posts){%>
             <div class="post-s">
-                <h4>
-                    <li class="post-content">
-                        <%=post.content%>
+                <p> 
+                    <small> <h3><%=post.user.name%></h3> </small>
+                    <%if(locals.user && locals.user.id==post.user.id){%>
+                        <small>
+                            <a href="posts/destroy/<%=post.id%>"><i class="far fa-trash-alt"></i></a></small>
+                    <%}%>
+                       <li class="post-content">
+                        :)- <%=post.content%>
                     </li>
-                </h4>
-                <p>
-                <small> by: <%=post.user.name%> </small> </p>
+                </p>
             
                 <div class="post-comments">
                     <%if(locals.user){%>
@@ -46,7 +49,7 @@
                                        </small>
                                     </li> 
                                         <br>
-                                    <li>
+                                    <li class="comment-content">
                                         <%=comment.content%>
                                     </li>
                                     
