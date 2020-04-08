@@ -14,9 +14,11 @@ main {
         margin-left: 20px; }
         main #post-layout section #new-post-form #post-text {
           width: 80%;
-          border-radius: 20px; }
+          border-radius: 5px; }
           main #post-layout section #new-post-form #post-text #post-text:focus {
             outline: none; }
+          main #post-layout section #new-post-form #post-text::placeholder {
+            margin-left: 20px; }
         main #post-layout section #new-post-form .sub-post #post-submit {
           background-color: black;
           color: #e9ebee;
@@ -25,11 +27,34 @@ main {
           border: 0;
           margin: 5px;
           border-radius: 2px; }
-    main #post-layout .posts .post-s .post-content {
-      background-color: #e9ebee;
-      width: 80%;
-      border: 0.1px black solid;
-      border-radius: 5px; }
-    main #post-layout .posts .post-s .post-comments {
-      width: 80%;
-      background-color: #e9ebee; }
+    main #post-layout .posts {
+      width: 95%; }
+      main #post-layout .posts ul {
+        list-style: none; }
+      main #post-layout .posts .post-s {
+        margin: 10px;
+        border: 0.1px grey solid; }
+        main #post-layout .posts .post-s .post-content {
+          margin: 10px;
+          background-color: #e9ebee;
+          border-radius: 5px; }
+        main #post-layout .posts .post-s .post-comments {
+          border-top: 0.1px black solid; }
+          main #post-layout .posts .post-s .post-comments .comment-form {
+            margin: 20px; }
+            main #post-layout .posts .post-s .post-comments .comment-form .add-comment {
+              border: 0;
+              padding: 0;
+              height: 23px;
+              background-color: black;
+              border-radius: 5px;
+              color: white; }
+              main #post-layout .posts .post-s .post-comments .comment-form .add-comment:hover {
+                background-color: lightgrey;
+                color: black;
+                transition: 0.5s; }
+          main #post-layout .posts .post-s .post-comments .post-comments-list li small {
+            color: green;
+            background-color: #e9ebee;
+            border: 0.1px solid black;
+            padding: 5px; }

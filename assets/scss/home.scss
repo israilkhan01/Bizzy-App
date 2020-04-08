@@ -22,9 +22,12 @@ main{
                     margin-left: 20px;
                     #post-text{
                         width: 80%;
-                        border-radius: 20px;
+                        border-radius: 5px;
                         #post-text:focus{
                             outline: none;
+                        }
+                        &::placeholder{
+                            margin-left: 20px;
                         }
                 
                     
@@ -46,19 +49,51 @@ main{
             }
 
             .posts{
-               
+                width: 95%;
+
+               ul{
+                   list-style: none;
+               }
                 .post-s{
                     // background-color: #e9ebee;
-                    // border: 0.1px grey solid;
+                    margin: 10px;
+                    border: 0.1px grey solid;
                     .post-content{
+                        margin: 10px;
                         background-color: #e9ebee;
-                        width: 80%;
-                        border: 0.1px black solid;
                         border-radius: 5px;
                     }
                     .post-comments{
-                        width: 80%;
-                        background-color:#e9ebee ;
+                  
+                        border-top: 0.1px black solid;
+                        .comment-form{
+                            margin: 20px;
+                            .add-comment{
+                                border: 0;
+                                padding: 0;
+                                height: 23px;
+                                background-color:black;
+                                border-radius: 5px;
+                                color: white;
+                                &:hover{
+                                    background-color: lightgrey;
+                                    color: black;
+                                    transition: 0.5s;
+                                }
+                            
+                            }
+                        }
+                        .post-comments-list{
+                            li{
+                                small{
+                                    color: green;
+                                    background-color:#e9ebee;
+                                    border: 0.1px solid black;
+                                    padding: 5px;
+                                }
+                              
+                            }
+                        }
                     }
                 }
             }
