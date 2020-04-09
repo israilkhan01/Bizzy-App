@@ -1,8 +1,8 @@
-$primary-color:#003923;
+$primary-color:#16181c;
 header{
     margin: 0;
     background-color: $primary-color;
-    border-bottom:1px lightgrey solid;
+    border-bottom:0.2px lightgrey solid;
     background-attachment: fixed;
     position: static;
     .headers{
@@ -12,10 +12,12 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 10px;
+    
     justify-content: space-between;
         div{
             display: inline-flex;
-            h2{
+            h2{ 
+                border-radius: 5px;
                 border: white 1px solid;
             }
         }

@@ -1,7 +1,7 @@
 header {
   margin: 0;
-  background-color: #003923;
-  border-bottom: 1px lightgrey solid;
+  background-color: #16181c;
+  border-bottom: 0.2px lightgrey solid;
   background-attachment: fixed;
   position: static; }
   header .headers {
@@ -15,6 +15,7 @@ header {
     header .headers div {
       display: inline-flex; }
       header .headers div h2 {
+        border-radius: 5px;
         border: white 1px solid; }
     header .headers ul {
       margin-right: 10px; }

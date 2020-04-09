@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: lightgrey;
-  font-family: sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
   body #header {
     width: 100%;
     position: fixed;
@@ -10,3 +10,5 @@ body {
     width: 50%;
     display: inline-block;
     left: 25%; }
+  body .footer {
+    position: relative; }

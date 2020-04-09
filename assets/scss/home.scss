@@ -1,6 +1,6 @@
 
 main{
-    display: inline-block;
+
     #post-layout{
             background-color: white;
             border: 0.1px #e9ebee solid;
@@ -42,6 +42,7 @@ main{
                             border:0;
                             margin: 5px;
                             border-radius: 2px;
+                            cursor: pointer;
                         }
                      }
                 
@@ -57,7 +58,13 @@ main{
                 .post-s{
                     // background-color: #e9ebee;
                     margin: 10px;
-                    border: 0.1px grey solid;
+                    border: 1px lightgrey solid;
+                    border-radius: 5px;
+                    .post-user{
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
                     .post-content{
                         margin: 10px;
                         background-color: #e9ebee;
@@ -65,16 +72,17 @@ main{
                     }
                     .post-comments{
                   
-                        border-top: 0.1px black solid;
+                        border-top: 0.1px lightgrey solid;
                         .comment-form{
                             margin: 20px;
                             .add-comment{
                                 border: 0;
                                 padding: 0;
-                                height: 23px;
+                                height: 22px;
                                 background-color:black;
                                 border-radius: 5px;
                                 color: white;
+                                cursor: pointer;
                                 &:hover{
                                     background-color: lightgrey;
                                     color: black;
@@ -95,6 +103,7 @@ main{
                             }
                             .comment-content{
                                 background-color:#e9ebee;
+                                width: 90%;
                                 padding: 7px;
                                 border-radius: 5px;
                             }

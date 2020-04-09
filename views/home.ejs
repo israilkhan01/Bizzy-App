@@ -21,10 +21,11 @@
             <%for(post of posts){%>
             <div class="post-s">
                 <p> 
-                    <small> <h3><%=post.user.name%></h3> </small>
+                    <small class="post-user"> <%=post.user.name%></small>
                     <%if(locals.user && locals.user.id==post.user.id){%>
                         <small>
-                            <a href="posts/destroy/<%=post.id%>"><i class="far fa-trash-alt"></i></a></small>
+                            <a href="posts/destroy/<%=post.id%>"><i class="far fa-trash-alt"></i></a>
+                        </small>
                     <%}%>
                        <li class="post-content">
                         :)- <%=post.content%>
@@ -42,18 +43,23 @@
                         <div class="post-comments-list">
                             <ul id="post-comment-<%=post._id%>">
                                 <%for(comment of post.comments){%>
-                                <p>
-                                    <li>
-                                      <small>
-                                           <%=comment.user.name%>
-                                       </small>
-                                    </li> 
-                                        <br>
-                                    <li class="comment-content">
-                                        <%=comment.content%>
-                                    </li>
-                                    
-                                </p>
+                            <p>
+                                <li>
+                                    <small>
+                                        <%=comment.user.name%>
+                                    </small>
+                                    <% if((locals.user)&&(locals.user.id==comment.user.id||locals.user.id==post.user.id)){%>
+                                    <small>
+                                    <a href="comments/destroy/<%=comment.id%>"><i class="far fa-trash-alt"></i></a>
+                                </small>
+                                <%}%>
+                                </li> 
+                                    <br>
+                                <li class="comment-content">
+                                    <%=comment.content%>
+                                </li>
+                                
+                            </p>
 
                                 <%}%>
                         </ul>
