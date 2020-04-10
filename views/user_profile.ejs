@@ -3,6 +3,15 @@
     <h1> 
         Hello This is the Bizzy APP!/ <%=title%> paGe.
     </h1>
-    <p><%=user.name%> </p>
-    <p><%=user.email%></p>
+    
+    <%if(user.id==profile_user.id){%>
+        <!-- if user matches then show the form -->
+        <p><%=user.name%> </p>
+        <p><%=user.email%></p>
+        <%}else{%>
+            <!-- else show only the profile info -->
+            <p><%=profile_user.name%> </p>
+            <p><%=profile_user.email%></p>
+            <%}%>
+
 </main>

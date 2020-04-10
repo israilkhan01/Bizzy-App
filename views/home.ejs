@@ -25,3 +25,13 @@
             </div>
     </div>
 </main>
+<section>
+    <h4>Friends</h4>
+    <div class="friend-list" style="background-color: bisque;">
+        <%for(x of all_users){%>
+             <%if(x.id!=user.id){%>
+              <li><a href="users/profile/<%=x.id%>"><%=x.name%></a></li>
+              <%}%>
+            <%}%>
+    </div>
+</section>
