@@ -2,8 +2,10 @@ header {
   margin: 0;
   background-color: #16181c;
   border-bottom: 0.2px lightgrey solid;
-  background-attachment: fixed;
-  position: static; }
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100; }
   header .headers {
     font-family: sans-serif;
     color: #e9ebee;

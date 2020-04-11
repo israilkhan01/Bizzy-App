@@ -1,12 +1,13 @@
 #post-layout{
             background-color: white;
             border: 0.1px #e9ebee solid;
-            padding-top: 55px;
             display: flex;
+            padding-top: 65px;
             flex-wrap: wrap;
             flex-direction:column;
             justify-content: space-between;
             position: relative;
+            
             .create-post{
                 background-color:#e9ebee;
                 padding: 0;
