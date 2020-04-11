@@ -1,5 +1,6 @@
 const User=require('../models/user')
 
+// let keep it same as before
 module.exports.profile=function(req,res){
    User.findById(req.params.id,function(err,users){
     return res.render('user_profile',{
