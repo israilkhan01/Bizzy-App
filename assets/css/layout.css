@@ -8,5 +8,3 @@ body {
     z-index: 1; }
   body .body {
     width: 100%; }
-  body .footer {
-    position: sticky; }
