@@ -12,6 +12,7 @@
                 background-color:#e9ebee;
                 padding: 0;
                 width: 70%;
+                position: relative;
                 div{ 
                    
                     h3{ 
@@ -87,7 +88,7 @@
                     }
                     .post-comments{
                        padding: 0;
-                        border-top: 0.1px lightgrey solid;
+                        border-top: 0.5px lightgrey solid;
                         .comment-form{
                             padding: 10px;
                             margin: 0;
@@ -138,11 +139,11 @@
             width: 28%;
             padding: 20px;
             background-color:#e9ebee;
-            border-left: black 1px solid;
+            border-left: black 5px solid;
             .friend-list{
                 width: 90%;
                 height: 200px;
-                border: 1px lightgrey solid;
+                border: 10px black solid;
                 background-color: white;
                 border-radius: 5px;
                 padding: 10px;

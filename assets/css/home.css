@@ -10,7 +10,8 @@
   #post-layout .create-post {
     background-color: #e9ebee;
     padding: 0;
-    width: 70%; }
+    width: 70%;
+    position: relative; }
     #post-layout .create-post div h3 {
       padding-left: 10px; }
     #post-layout .create-post #new-post-form {
@@ -63,7 +64,7 @@
           border-radius: 5px; }
         #post-layout .create-post .posts .post-s .post-comments {
           padding: 0;
-          border-top: 0.1px lightgrey solid; }
+          border-top: 0.5px lightgrey solid; }
           #post-layout .create-post .posts .post-s .post-comments .comment-form {
             padding: 10px;
             margin: 0; }
@@ -100,11 +101,11 @@
     width: 28%;
     padding: 20px;
     background-color: #e9ebee;
-    border-left: black 1px solid; }
+    border-left: black 5px solid; }
     #post-layout .friends .friend-list {
       width: 90%;
       height: 200px;
-      border: 1px lightgrey solid;
+      border: 10px black solid;
       background-color: white;
       border-radius: 5px;
       padding: 10px;

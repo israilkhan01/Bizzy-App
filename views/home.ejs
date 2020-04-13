@@ -13,7 +13,7 @@
             <%}%>
         
             <div class="posts">
-                <ul>
+                <ul id="post-list">
                    <%for(post of posts.reverse()){%>
                     <%-include('_post')-%>
                     <%}%>
@@ -35,3 +35,4 @@
         </div>
     </section>
 </div>
+<script src="/js/home_posts.js"></script>
