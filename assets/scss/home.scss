@@ -157,6 +157,11 @@
                     z-index: 100;
                     a{
                         color: black;
+                        text-decoration: none;
+                        &:hover{
+                            color: grey;
+                            transition:  ease-in-out 0.1s;
+                            font-size: large;                        }
                     }
                 }
             }

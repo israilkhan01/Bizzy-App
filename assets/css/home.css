@@ -117,4 +117,9 @@
         position: sticky;
         z-index: 100; }
         #post-layout .friends .friend-list .friend a {
-          color: black; }
+          color: black;
+          text-decoration: none; }
+          #post-layout .friends .friend-list .friend a:hover {
+            color: grey;
+            transition: ease-in-out 0.1s;
+            font-size: large; }

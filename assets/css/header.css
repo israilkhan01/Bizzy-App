@@ -14,11 +14,14 @@ header {
     flex-direction: row;
     margin-left: 10px;
     justify-content: space-between; }
-    header .headers div {
-      display: inline-flex; }
-      header .headers div h2 {
-        border-radius: 5px;
-        border: white 1px solid; }
+    header .headers a {
+      color: white;
+      text-decoration: none; }
+      header .headers a div {
+        display: inline-flex; }
+        header .headers a div h2 {
+          border-radius: 5px;
+          border: white 1px solid; }
     header .headers ul {
       margin-right: 10px; }
       header .headers ul a {

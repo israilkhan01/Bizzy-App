@@ -1,4 +1,3 @@
-// import { get } from "mongoose";
 {  //method to submit the form data for new post using AJax 
     let createPost=function(){
         let newpostForm=$('#new-post-form');
@@ -10,8 +9,9 @@
                 data:newpostForm.serialize(),
                 success:function(data){
                     let newpost=newpostDom(data.data.post);
-                    $('#post-list').prepend(newpost);
-                    // deletePost($(' .delete-post',newpost));
+                    $('.posts>ul').prepend(newpost);
+                    // console.log($(' .delete-post',newpost));
+                    deletePost($(' .delete-post',newpost));
                 },
                 error:function(error){
                    console.log(error.responseText);
@@ -24,11 +24,11 @@
     }
     //method to create the post in Dom
     let newpostDom=function(post){
-         return $(`<div class="post-s" id="post-${post._id} ">
+         return $(`<div class="post-s" id="post-${post._id}">
          <p> 
              <small class="post-user"> ${ post.user.name } </small>
             <small>
-                <a href="posts/destroy/${post.id}" class="delete-post"><i class="far fa-trash-alt"></i></a>
+                <a href="posts/destroy/${post._id}" class="delete-post"><i class="far fa-trash-alt"></i></a>
             </small>
         
                 <li class="post-content">
@@ -52,22 +52,22 @@
          </div>
          </div>`)
     }
+    let deletePost=function(deletelink){
+        $(deletelink).click(function(event){
+            event.preventDefault();
+            $.ajax({
+                type:'get',
+                url:$(deletelink).prop('href'),
+                success:function(data){
+                    console.log($(`#post-${data.data.post_id}`)[0]);
+                    $(`#post-${data.data.post_id}`).remove();
+                },
+                error:function(error){
+                    console.log(error.responseText);
+                }
+
+            })
+        })
+    }
     createPost();
-
-    // let deletePost=function(deletelink){
-    //     $(deletelink).click(function(event){
-    //         event.preventDefault();
-    //         $.ajax({
-    //             type:'get',
-    //             url:$(deletelink).prop('href'),
-    //             success:function(data){
-    //                 $(`#post-${data.post_id}`).remove();
-    //             },
-    //             error:function(error){
-    //                 console.log(error.responseText);
-    //             }
-
-    //         })
-    //     })
-    // }
 }

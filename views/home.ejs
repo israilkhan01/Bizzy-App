@@ -13,8 +13,8 @@
             <%}%>
         
             <div class="posts">
-                <ul id="post-list">
-                   <%for(post of posts.reverse()){%>
+                <ul>
+                   <%for(post of posts){%>
                     <%-include('_post')-%>
                     <%}%>
                 </ul>

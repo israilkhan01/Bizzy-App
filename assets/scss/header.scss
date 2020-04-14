@@ -17,13 +17,18 @@ header{
     margin-left: 10px;
     
     justify-content: space-between;
+       a{ 
+        color: white;
+        text-decoration: none;
         div{
             display: inline-flex;
             h2{ 
                 border-radius: 5px;
                 border: white 1px solid;
+                
             }
         }
+       }
         ul
         {
              margin-right: 10px;
