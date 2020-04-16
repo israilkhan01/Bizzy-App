@@ -19,26 +19,29 @@ module.exports.update= async function(req,res){
     //     return res.status(401).send('UnAuthourised');
     // }
     if(req.user.id==req.params.id){
-          try{
-               let user=await User.findById(req.params.id);
-               User.uploadedAvatar(req,res,function(err){
-                  if(err){
-                    console.log('****multer error:',err);}
-                    user.name=req.body.name;
-                    user.email=req.body.email;
-                    if(req.avatar){
-                        //this is the path of the uploaded file into the avatar filled in the user
-                        user.avatar=User.avatarpath+'/'+req.file.filename;
-                    }
-                  user.save();
-                  return res.redirect('back')
-               })
+        try{
+            let user=await User.findById(req.params.id);
+            User.uploadedAvatar(req,res,function(err){
+                if(err){
+                console.log('****multer error:',err);
+
+                }
+                console.log(req.file)
+                user.name=req.body.name;
+                user.email=req.body.email;
+                if(req.avatar){
+                    //this is the path of the uploaded file into the avatar filled in the user
+                    user.avatar= User.avatarPath + '/' + req.file.filename;
+                }
+                user.save();
+                return res.redirect('back')
+            })
           }catch(err){
-              res.flash('error',err);
+              req.flash('error',err);
               return res.redirect('back');
           }
-    }else{
-        res.flash('error','Unautherized')
+          }else{
+        req.flash('error','Unautherized')
         return res.status(401).send('UnAuthourised');
     }
     
