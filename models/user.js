@@ -29,7 +29,7 @@ const userSchema=new mongoose.Schema({
 //database only  stored the path of files using a key avatar not a whole file
 //file will be stored in a bucket(cloud like AWS) or a local storage  (like your mac where server is-
 // running
-let storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null,path.join( __dirname,'..',AVATAR_PATH))
     },
