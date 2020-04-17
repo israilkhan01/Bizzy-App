@@ -1,21 +1,21 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 <main>
     <h1> 
-        Hello This is the Bizzy APP!/ <%=title%> paGe.
+        <%=title%>
     </h1>
+    <img src="<%= profile_user.avatar %>" alt="<%= user.name %>" width="100">
     
-    <%if(user.id==profile_user.id){%>
-        
-  <form action="/users/update/<%=profile_user.id%>" method="POST" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
-    <input type="email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
-    <input type="file" name="avatar" placeholder="profile Picture">
-    <input type="submit" value="Reset"> 
-</form>
-        <%}else{%>
+    <%if(user.id==profile_user.id){%> 
+        <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" >
+            <input type="text" name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
+            <input type="email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
+            <input type="file" name="avatar" placeholder="profile Picture">
+            <input type="submit" value="Upload"> 
+        </form>
+    <%}else{%>
             <!-- else show only the profile info -->
             <p><%=profile_user.name%> </p>
             <p><%=profile_user.email%></p>
-            <%}%>
+    <%}%>
 
 </main>
