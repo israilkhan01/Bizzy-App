@@ -3,26 +3,35 @@
     
     <div class="headers">
          <a href="/" class="home">
-           <div>
+           <div id="app-name">
               <h2>B</h2>
               <h2>BizzY</h2>
             </div>
           </a>
-        <ul>
+        <ul class="user-profile">
             <% if (locals.user){%>
-            <li>
-                <a href="/users/profile/<%=user.id%>"> <%=user.name%></a> 
-            </li>
-            <li>
-                <a href="/users/sign-out"> sign-out</a>
-            </li>
+            <div  class="profile-img"> 
+                <div id="image">
+                    <img src="<%=user.avatar%>" alt="profile" width="35" height="35">
+                </div>
+                <div id="name">
+                    <a href="/users/profile/<%=user.id%>"> <%=user.name%></a> 
+                </div>      
+            </div>
+            <div class="profile-status">
+                <li>
+                    <a href="/users/sign-out"> sign-out</a>
+                </li>
+            </div>
             <%}else{%>
-                <li>
-                    <a href="/users/sign-in"> sign-in</a>
-                </li>
-                <li>
-                    <a href="/users/sign-up"> sign-up</a>
-                </li>
+                <div class="offline">
+                    <li>
+                        <a href="/users/sign-in"> sign-in</a>
+                    </li>
+                    <li>
+                        <a href="/users/sign-up"> sign-up</a>
+                    </li>
+                </div>
             <%}%>
         </ul>
     </div>

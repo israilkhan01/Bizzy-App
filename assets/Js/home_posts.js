@@ -26,7 +26,8 @@
     //method to create the post in Dom
     let newpostDom=function(post){
          return $(`<div class="post-s" id="post-${post._id}">
-                <p> 
+                <p class='post-header'>  
+                    <img class="image" src="${post.user.avatar}" alt="" height="25" width="25">
                     <small class="post-user"> ${ post.user.name } </small>
                     <small>
                         <a href="posts/destroy/${post._id}" class="delete-post"><i class="far fa-trash-alt"></i></a>

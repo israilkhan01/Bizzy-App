@@ -1,14 +1,15 @@
 <div class="post-s" id="post-<%=post._id%>">
-    <p> 
+    <p class="post-header">  
+        <img class="image" src="<%=post.user.avatar%>" alt="" height="25" width="25">
         <small class="post-user"> <%=post.user.name%></small>
         <%if(locals.user && locals.user.id==post.user.id){%>
             <small>
                 <a href="posts/destroy/<%=post.id%>" class="delete-post"><i class="far fa-trash-alt"></i></a>
             </small>
         <%}%>
-           <li class="post-content">
+        <li class="post-content">
             :)- <%=post.content%>
-        </li>
+         </li>
     </p>
 
     <div class="post-comments">

@@ -20,21 +20,47 @@ header{
        a{ 
         color: white;
         text-decoration: none;
-        div{
+        margin: 0;
+         #app-name{
             display: inline-flex;
+            padding: 5px;
+            
             h2{ 
                 border-radius: 5px;
+                margin: 10 0 10 0;
                 border: white 1px solid;
                 
             }
         }
        }
-        ul
-        {
-             margin-right: 10px;
-            a{
-                color: white;
+       .user-profile{
+            margin: 10;
+            padding: 0;
+            margin-right: 10px;
+            list-style: none;
+            display: flex;
+            -webkit-box-align: stretch;
+            -webkit-box-orient: horizontal;
+            justify-content: space-between;
+           .profile-img{
+            //    padding: 5px;
+               display: flex;
+               -webkit-box-orient: horizontal;
+               img{
+                border-radius: 50%;
+                border: 0.5px white solid;
+              }
+               padding-right: 15px;
+               #name{
+                   padding: 10px;
+               }
             }
-        }
+            .profile-status{
+                padding: 10px;
+            }
+           .offline{
+               display: inline;
+           }
+       }
  }
 }

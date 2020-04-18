@@ -16,13 +16,34 @@ header {
     justify-content: space-between; }
     header .headers a {
       color: white;
-      text-decoration: none; }
-      header .headers a div {
-        display: inline-flex; }
-        header .headers a div h2 {
+      text-decoration: none;
+      margin: 0; }
+      header .headers a #app-name {
+        display: inline-flex;
+        padding: 5px; }
+        header .headers a #app-name h2 {
           border-radius: 5px;
+          margin: 10 0 10 0;
           border: white 1px solid; }
-    header .headers ul {
-      margin-right: 10px; }
-      header .headers ul a {
-        color: white; }
+    header .headers .user-profile {
+      margin: 10;
+      padding: 0;
+      margin-right: 10px;
+      list-style: none;
+      display: flex;
+      -webkit-box-align: stretch;
+      -webkit-box-orient: horizontal;
+      justify-content: space-between; }
+      header .headers .user-profile .profile-img {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        padding-right: 15px; }
+        header .headers .user-profile .profile-img img {
+          border-radius: 50%;
+          border: 0.5px white solid; }
+        header .headers .user-profile .profile-img #name {
+          padding: 10px; }
+      header .headers .user-profile .profile-status {
+        padding: 10px; }
+      header .headers .user-profile .offline {
+        display: inline; }
