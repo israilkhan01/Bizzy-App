@@ -1,4 +1,75 @@
-.sign-up{
-    position: relative;
-     padding: 100px;
- }
+main{
+    text-align: center;
+    padding: 100px;
+    height: 71vh;
+    background-color: lightgrey;
+    // background-image: url('../images/forest.jpg');
+    .sign-up{
+        position: relative;
+         top: 20px;
+         height: 400px;
+         width: 350px;
+         padding: 50px 100px 50px 100px;
+         background-color:#211f1f;
+        //  border: 1px solid black;
+        box-shadow: 12px 12px 15px 0 rgba(0,0,0,.25);
+         border-radius: 5px;
+         text-align: center;
+         display: inline-block;
+        h1{
+            margin:0;
+            padding-bottom: 30px;
+            color: white;
+        }
+        .form-div{
+            width:100%;
+            position: relative;
+            padding-top: 20px;
+            .sign-up-form{
+                display: inline-block;
+                padding:5%;
+                width: 90%;
+                border: 0.4px whitesmoke solid;
+                border-radius: 10px;
+                input{
+                    width: 100%;
+                    height: 32px;
+                    padding: 5px;
+                    border:0;
+                    border-bottom: 0.4px whitesmoke solid;
+           
+                    border-radius: 5px;
+                    background-color:transparent;
+                    color: white;
+                    outline: none;
+                    &::placeholder{
+                        
+                        color: lightgray;
+                    }
+                }
+                #name{
+                    margin-bottom: 10px;
+                }
+                #email{
+                    margin-bottom: 10px;
+                }
+                #pass{
+                    margin-bottom: 10px;
+                }
+                #submit{
+                    // width: 40%;
+                    border: 0;
+                    background-color: grey;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    &:hover{
+                        background-color:white;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+        
+        
+     }
+}

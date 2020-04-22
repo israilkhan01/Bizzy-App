@@ -3,7 +3,7 @@
         let newcommentform=$('.comment-form');
        
         newcommentform.submit(function(event){
-             event.preventDefault();
+            //  event.preventDefault();
              $.ajax({
                  type:'post',
                  url:'/comments/create',

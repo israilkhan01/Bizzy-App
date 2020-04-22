@@ -1,6 +1,7 @@
 const User=require('../models/user')
 const fs=require('fs');
 const path=require('path');
+
 // let keep it same as before
 module.exports.profile=function(req,res){
    User.findById(req.params.id,function(err,users){

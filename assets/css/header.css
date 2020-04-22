@@ -1,12 +1,15 @@
-header {
+.head {
+  top: 0;
   margin: 0;
-  background-color: #16181c;
+  background-color: #211f1f;
   border-bottom: 0.2px lightgrey solid;
   padding: 0;
   width: 100%;
+  box-sizing: inherit;
   position: fixed;
-  z-index: 100; }
-  header .headers {
+  text-overflow: ellipsis;
+  z-index: 1000; }
+  .head .headers {
     font-family: sans-serif;
     color: #e9ebee;
     display: flex;
@@ -14,18 +17,18 @@ header {
     flex-direction: row;
     margin-left: 10px;
     justify-content: space-between; }
-    header .headers a {
+    .head .headers a {
       color: white;
       text-decoration: none;
       margin: 0; }
-      header .headers a #app-name {
+      .head .headers a #app-name {
         display: inline-flex;
         padding: 5px; }
-        header .headers a #app-name h2 {
+        .head .headers a #app-name h2 {
           border-radius: 5px;
           margin: 10 0 10 0;
           border: white 1px solid; }
-    header .headers .user-profile {
+    .head .headers .user-profile {
       margin: 10;
       padding: 0;
       margin-right: 10px;
@@ -34,16 +37,16 @@ header {
       -webkit-box-align: stretch;
       -webkit-box-orient: horizontal;
       justify-content: space-between; }
-      header .headers .user-profile .profile-img {
+      .head .headers .user-profile .profile-img {
+        height: 28px;
         display: flex;
-        -webkit-box-orient: horizontal;
-        padding-right: 15px; }
-        header .headers .user-profile .profile-img img {
-          border-radius: 50%;
+        -webkit-box-orient: vertical; }
+        .head .headers .user-profile .profile-img img {
+          padding: 5px;
           border: 0.5px white solid; }
-        header .headers .user-profile .profile-img #name {
+        .head .headers .user-profile .profile-img #name {
           padding: 10px; }
-      header .headers .user-profile .profile-status {
+      .head .headers .user-profile .profile-status {
         padding: 10px; }
-      header .headers .user-profile .offline {
+      .head .headers .user-profile .offline {
         display: inline; }

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/header.css">
-<header>
+<div class="head">
     
     <div class="headers">
          <a href="/" class="home">
@@ -12,7 +12,7 @@
             <% if (locals.user){%>
             <div  class="profile-img"> 
                 <div id="image">
-                    <img src="<%=user.avatar%>" alt="profile" width="35" height="35">
+                    <img src="<%=user.avatar%>" alt="profile" width="27" height="27">
                 </div>
                 <div id="name">
                     <a href="/users/profile/<%=user.id%>"> <%=user.name%></a> 
@@ -35,4 +35,4 @@
             <%}%>
         </ul>
     </div>
-</header>
+</div>

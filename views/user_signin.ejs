@@ -1,13 +1,19 @@
 <link rel="stylesheet" href="/css/user_sign_in.css">
-<div class="sign-in">
-    <h1>Log In</h1>
-    <form action="/users/create-session" method="POST">
-        <!-- Username -->
-        <input type="email" name="email" placeholder="Your Email" required>
-        <!-- <br> -->
-        <!-- password -->
-        <input type="password" name="password" required>
-        <!-- <br> -->
-        <input type="submit" value="Login">
-    </form>
-</div>
+<main>
+    <div class="sign-in">
+        <h1>Sign In</h1>
+        <div class="form-div">
+            <form class="sign-in-form" action="/users/create-session" method="POST">
+                <!-- Username -->
+         
+                <input id="email" type="email" name="email" placeholder="Your Email" required>
+                <!-- <br> -->
+                <!-- password -->
+                <input id="pass" type="password" name="password" required>
+                <!-- <br> -->
+                
+                <input id="submit" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</main>
