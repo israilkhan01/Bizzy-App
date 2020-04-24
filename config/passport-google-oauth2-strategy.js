@@ -12,6 +12,7 @@ passport.use(new googleStrategy({
    function(accessToken,refreshToken,profile,done){
        User.findOne({email:profile.emails[0].value}).exec(function(err,user){
            if(err){console.log('Error in googe strategy passport',err);return;}
+           console.log('accessToken',accessToken,refreshToken);
            console.log(profile);
            if(user){
                //if find then set it as req.user
@@ -24,7 +25,7 @@ passport.use(new googleStrategy({
                    password:crypto.randomBytes(20).toString('hex')
                },
                function(err,user){
-                if(err){console.log('Error in googe strategy passport',err);return;}
+                if(err){console.log('Error in googe strategy passport while creating user',err);return;}
                 return done(null,user);
                })
            }
