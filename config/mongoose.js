@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb://localhost/Bizzy_development');
+mongoose.connect('mongodb://localhost/Bizzy_development'). catch((error)=>handleError(error));
+
 
 const db=mongoose.connection;
 db.on('error',console.error.bind(console,'Error connnecting to the mongoDb'));
