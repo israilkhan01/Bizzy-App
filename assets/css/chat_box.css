@@ -1,0 +1,49 @@
+.chatting {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  background-color: wheat;
+  border: 1px solid black;
+  padding: 30px; }
+  .chatting .chatting-box {
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+    .chatting .chatting-box .messages {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      height: 70%;
+      background-color: white;
+      overflow: auto; }
+      .chatting .chatting-box .messages .other-message {
+        text-align: left;
+        padding: 5px; }
+        .chatting .chatting-box .messages .other-message span {
+          display: inline-block;
+          padding: 15px;
+          background-color: #ffa0a0; }
+      .chatting .chatting-box .messages .self-message {
+        text-align: right;
+        padding: 5px; }
+        .chatting .chatting-box .messages .self-message span {
+          display: inline-block;
+          padding: 15px;
+          background-color: #a0dcff; }
+    .chatting .chatting-box .mesg-sendd {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: row; }
+      .chatting .chatting-box .mesg-sendd #messges-input {
+        height: 50%;
+        width: 70%; }
+      .chatting .chatting-box .mesg-sendd #sent {
+        height: 50%;
+        width: 30%;
+        font-size: 25px;
+        color: white;
+        border: none;
+        background: #58d258; }
