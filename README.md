@@ -1,4 +1,4 @@
-# bizzy-App
+# Bizzy-App
 
 This App is under process!
-It could be social media webApp
+And this is  Social Media webApp
