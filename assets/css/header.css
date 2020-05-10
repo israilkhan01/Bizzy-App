@@ -1,8 +1,8 @@
 .head {
   top: 0;
   margin: 0;
-  background-color: #211f1f;
-  border-bottom: 0.2px lightgrey solid;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  border-bottom: 2px white solid;
   padding: 0;
   width: 100%;
   box-sizing: inherit;
@@ -11,7 +11,7 @@
   z-index: 1000; }
   .head .headers {
     font-family: sans-serif;
-    color: #e9ebee;
+    color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -27,7 +27,7 @@
         .head .headers a #app-name h2 {
           border-radius: 5px;
           margin: 10 0 10 0;
-          border: white 1px solid; }
+          border: white 3px solid; }
     .head .headers .user-profile {
       margin: 10;
       padding: 0;
@@ -43,10 +43,14 @@
         -webkit-box-orient: vertical; }
         .head .headers .user-profile .profile-img img {
           padding: 5px;
-          border: 0.5px white solid; }
+          border: 1px white solid; }
         .head .headers .user-profile .profile-img #name {
-          padding: 10px; }
+          padding: 10px;
+          font-size: 1rem;
+          font-weight: 700; }
       .head .headers .user-profile .profile-status {
-        padding: 10px; }
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 700; }
       .head .headers .user-profile .offline {
         display: inline; }

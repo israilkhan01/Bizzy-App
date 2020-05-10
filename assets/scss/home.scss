@@ -1,6 +1,8 @@
 $primarycolor:#f3f3f6;
+// $primarycolor:;
 #post-layout{
-            background-color: $primarycolor;
+            // background-color: $primarycolor;
+            background-image: linear-gradient(90deg, white 51%,skyblue );
             border: 0.1px $primarycolor solid;
             display: flex;
             padding-top: 65px;
@@ -10,7 +12,7 @@ $primarycolor:#f3f3f6;
             position: relative;
             
             .create-post{
-                background-color:$primarycolor;
+                // background-color:$primarycolor;
                 padding: 0;
                 width: 70%;
                 position: relative;
@@ -72,7 +74,7 @@ $primarycolor:#f3f3f6;
                }
              
                 .post-s{
-                    background-color: $primarycolor;
+                    // background-color: $primarycolor;
                     padding: 10px;
                     border: 1px lightgrey solid;
                     border-radius: 5px;
@@ -94,7 +96,8 @@ $primarycolor:#f3f3f6;
                    }
                    .post-content{
                     padding: 10px;
-                    background-color: white;
+                    background-color: grey;
+                    color: white;
                     border-radius: 5px;
                    }
                    .post-comments{
@@ -149,7 +152,7 @@ $primarycolor:#f3f3f6;
             height: 100%;
             width: 28%;
             padding: 20px;
-            background-color:$primarycolor;
+            // background-color:$primarycolor;
             border-left: black 5px solid;
             .friend-list{
                 width: 90%;
