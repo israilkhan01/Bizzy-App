@@ -11,8 +11,10 @@
                 success:function(data){
                     let newpost=newpostDom(data.data.post);
                     $('.posts>ul').prepend(newpost);
+                    
                     // console.log($(' .delete-post',newpost));
                     deletePost($('.delete-post'));
+                    new PostComments(data.data.post._id);
                 },
                 error:function(error){
                    console.log(error.responseText);
@@ -71,8 +73,21 @@
             })
         })
     }
+    let convertPostsToAjax = function(){
+        $('.post-s').each(function(){
+            let self = $(this);
+            let deleteButton = $('.delete-post',self);
+            deletePost(deleteButton);
+
+            // get the post's id by splitting the id attribute
+            let postId = self.prop('id').split("-")[1];
+            console.log(postId)
+            new PostComments(postId);
+        });
+    }
     createPost();
-    deletePost($('.delete-post'));
+    // deletePost($('.delete-post'));
+    convertPostsToAjax();
 
     
 }
