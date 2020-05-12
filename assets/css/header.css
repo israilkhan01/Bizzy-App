@@ -32,6 +32,8 @@
     .head .headers .user-profile {
       margin: 10;
       padding: 0;
+      width: 70%;
+      left: 25%;
       margin-right: 10px;
       list-style: none;
       display: flex;
@@ -43,7 +45,8 @@
         display: flex;
         position: relative;
         -webkit-box-orient: vertical;
-        right: 50%; }
+        left: 10%;
+        right: 40%; }
         .head .headers .user-profile .profile-img img {
           padding: 4px;
           border-radius: 50%;
@@ -51,12 +54,15 @@
           box-shadow: 0 0 2px 2px white; }
         .head .headers .user-profile .profile-img .search-container {
           display: flex;
-          padding: 7px;
+          padding: 5px;
+          width: 50%;
           position: relative;
           right: 50px; }
           .head .headers .user-profile .profile-img .search-container #search {
-            width: 500px;
+            width: 80%;
+            min-width: 250px;
             height: 30px;
+            border: 0px;
             border-radius: 5px; }
             .head .headers .user-profile .profile-img .search-container #search::placeholder {
               padding: 5px;
@@ -65,11 +71,17 @@
             .head .headers .user-profile .profile-img .search-container #search:focus {
               outline: none;
               border: 0px; }
+          .head .headers .user-profile .profile-img .search-container #search-icon {
+            height: 25px; }
         .head .headers .user-profile .profile-img #name {
           padding: 10px;
           font-size: 1rem;
           font-weight: 700; }
         .head .headers .user-profile .profile-img #message-chatbox {
+          padding: 10px; }
+        .head .headers .user-profile .profile-img #notification {
+          padding: 10px; }
+        .head .headers .user-profile .profile-img #findfriends {
           padding: 10px; }
       .head .headers .user-profile .profile-status {
         padding: 10px;

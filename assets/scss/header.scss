@@ -42,6 +42,8 @@ $primary-color: #010101 ;
        .user-profile{
             margin: 10;
             padding: 0;
+            width: 70%;
+            left:25%;
             margin-right: 10px;
             list-style: none;
             display: flex;
@@ -60,14 +62,18 @@ $primary-color: #010101 ;
                 // border: 1px white solid;
                 box-shadow: 0 0 2px 2px white;
                }
-               right: 50%;
+               left: 10%;
+               right: 40%;
                .search-container{
                    display: flex;
-                   padding: 7px;
+                   padding: 5px;
+                   width: 50%;
                    position: relative;
                    #search{
-                       width: 500px;
+                       width: 80%;
+                       min-width: 250px;
                        height: 30px;
+                       border: 0px;
                        border-radius: 5px;
                        &::placeholder{
                            padding: 5px;
@@ -79,6 +85,9 @@ $primary-color: #010101 ;
                            border: 0px;
                        }
                    }
+                   #search-icon{
+                       height: 25px;
+                   }
                    right: 50px;
                }
                #name{
@@ -89,6 +98,12 @@ $primary-color: #010101 ;
                #message-chatbox{
                 padding: 10px;
                }
+               #notification{
+                padding: 10px;
+                }
+                #findfriends{
+                    padding: 10px;
+                }
             }
             .profile-status{
                 padding: 10px;

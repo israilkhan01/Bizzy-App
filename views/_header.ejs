@@ -8,14 +8,14 @@
               <h2>BizzY</h2>
             </div>
           </a>
-        <ul class="user-profile">
+        <div class="user-profile">
             <% if (locals.user){%>
             
             <div  class="profile-img"> 
                 <div class="search-container">
                     <form action="">
                       <input id="search",type="text" placeholder="Search.." name="search">
-                      <button type="submit"><i class="fa fa-search"></i></button>
+                      <button id="search-icon" type="submit"><i class="fa fa-search"></i></button>
                     </form>
                  </div>
                 <div id="image">
@@ -28,6 +28,16 @@
                 <div id="message-chatbox">
                     <a href=""><i class="fas fa-envelope"></i></a>
                 </div>  
+                <div id="notification">
+                    <a href="">
+                        <i class="fa fa-bell"></i>
+                    </a>
+                </div>
+                <div id="findfriends">
+                    <a href="">
+                        <i class="fas fa-user-friends"></i>
+                    </a>
+                </div>
             </div>
             <div class="profile-status">
                 <li>
@@ -44,6 +54,6 @@
                     </li>
                 </div>
             <%}%>
-        </ul>
+            </div>
     </div>
 </div>
