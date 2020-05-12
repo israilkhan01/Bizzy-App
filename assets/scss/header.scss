@@ -67,17 +67,21 @@ $primary-color: #010101 ;
                .search-container{
                    display: flex;
                    padding: 5px;
-                   width: 50%;
+                   width: 60%;
                    position: relative;
                    #search{
                        width: 80%;
-                       min-width: 250px;
+                       min-width: 200px;
                        height: 30px;
                        border: 0px;
+                       font-size: 15px;
+                       color: black;
+                       font-weight: 500;
                        border-radius: 5px;
+                       padding-left: 10px;
                        &::placeholder{
                            padding: 5px;
-                           color: black;
+                           color: grey;
                            border: 05t;
                        }
                        &:focus{
@@ -87,6 +91,8 @@ $primary-color: #010101 ;
                    }
                    #search-icon{
                        height: 25px;
+                       border: 0;
+                       border-radius: 5px;
                    }
                    right: 50px;
                }

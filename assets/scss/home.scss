@@ -13,20 +13,23 @@ $primarycolor:#f3f3f6;
             
             .create-post{
                 width: 50%;
+                border-right: 5px solid black;
                 .posting{ 
-                    background-color:$primarycolor;
+                    background-image: linear-gradient(90deg,whitesmoke , skyblue );
                     padding: 0;
-                    width: 100%;
+                    // width: 99.7%;
                     position: inherit;
-                    border:1px solid lightgrey;
+                    border-bottom:2px solid black;
                 
                     z-index: 12;
                     h3{  
-                        width: 90%;
-                        border:2px solid lightgrey;
-                        left:3%;
+                        
+                        border-bottom:1.5px solid black;
+                        margin: 0px;
+                        // left:3%;
                         position: relative;
                         padding: 5px;
+                        // color: white;
                     }
                  }
                 #new-post-form{

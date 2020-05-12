@@ -1,34 +1,39 @@
 .chatting{
     position: fixed;
     bottom: 25px;
-    right: 0;
+    right: 25%;
     width: 300px;
-    height: 200px;
-    background-color:grey;
+    height: 350px;
+    background-color:black;
     border: 1px solid black;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 10px 2px 0px 2px;
     .chatting-box{
         // position: relative;
         text-align: center;
-   
         width: 100%;
         height: 100%;
         // border: 1px solid black;
+        .message-header{
+            color: white;
+            margin: 0px;
+        }
         .messages{
             list-style: none;
-            padding: 10px;
+            padding: 5px;
             margin: 0;
             height: 70%;
             background-color: white;
             overflow: auto;
-
+            border-radius: 10px;
             .other-message{
                 text-align: left;
                 padding: 5px;
                 span{
                     display: inline-block;
-                    padding: 15px;
+                    padding: 10px;
                     background-color: lightgray;
+                    border-radius: 10px;
                }
             }
             .self-message{
@@ -36,31 +41,51 @@
                 padding: 5px;
             
                 span{
-                    
+                    border-radius: 10px;
                     display: inline-block;
-                    padding: 15px;
+                    padding: 10px;
                     background-color: lightskyblue;
                 }
             
             }
          }
             .mesg-sendd{
-                height: 50%;
+                height: 55%;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
+                justify-content: space-evenly;
+                border-radius: 10px;
+                padding: 0;
+                padding-top: 10px;
                 #messges-input{
-                    height: 50%;
-                    width: 70%;
+                    height: 20%;
+                    width: 80%;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    border: 0;
+                    padding: 5px;
+                    &:focus{
+                        outline: none;
+                    }
                 }
     
                 #sent{
-                    height: 50%;
-                    width: 30%;
-                    font-size: 25px;
+                    
+                    height:18%;
+                    width: 13%;
+                    // font-size: 25px;
                     color: white;
-                    border: none;
-                    background: #58d258;
+                    border: 1px white solid;
+                    padding: 2px;
+                    border-radius: 10px;
+                    background: black;
+                    &:focus{
+                        outline: none;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
            

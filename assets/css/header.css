@@ -55,24 +55,30 @@
         .head .headers .user-profile .profile-img .search-container {
           display: flex;
           padding: 5px;
-          width: 50%;
+          width: 60%;
           position: relative;
           right: 50px; }
           .head .headers .user-profile .profile-img .search-container #search {
             width: 80%;
-            min-width: 250px;
+            min-width: 200px;
             height: 30px;
             border: 0px;
-            border-radius: 5px; }
+            font-size: 15px;
+            color: black;
+            font-weight: 500;
+            border-radius: 5px;
+            padding-left: 10px; }
             .head .headers .user-profile .profile-img .search-container #search::placeholder {
               padding: 5px;
-              color: black;
+              color: grey;
               border: 05t; }
             .head .headers .user-profile .profile-img .search-container #search:focus {
               outline: none;
               border: 0px; }
           .head .headers .user-profile .profile-img .search-container #search-icon {
-            height: 25px; }
+            height: 25px;
+            border: 0;
+            border-radius: 5px; }
         .head .headers .user-profile .profile-img #name {
           padding: 10px;
           font-size: 1rem;
