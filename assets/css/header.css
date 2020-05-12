@@ -1,8 +1,9 @@
 .head {
   top: 0;
   margin: 0;
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  border-bottom: 2px white solid;
+  background-color: #010101;
+  box-shadow: 0 0 1px 1px;
+  border-radius: 2px;
   padding: 0;
   width: 100%;
   box-sizing: inherit;
@@ -40,14 +41,36 @@
       .head .headers .user-profile .profile-img {
         height: 28px;
         display: flex;
-        -webkit-box-orient: vertical; }
+        position: relative;
+        -webkit-box-orient: vertical;
+        right: 50%; }
         .head .headers .user-profile .profile-img img {
-          padding: 5px;
-          border: 1px white solid; }
+          padding: 4px;
+          border-radius: 50%;
+          margin-right: 10px;
+          box-shadow: 0 0 2px 2px white; }
+        .head .headers .user-profile .profile-img .search-container {
+          display: flex;
+          padding: 7px;
+          position: relative;
+          right: 50px; }
+          .head .headers .user-profile .profile-img .search-container #search {
+            width: 500px;
+            height: 30px;
+            border-radius: 5px; }
+            .head .headers .user-profile .profile-img .search-container #search::placeholder {
+              padding: 5px;
+              color: black;
+              border: 05t; }
+            .head .headers .user-profile .profile-img .search-container #search:focus {
+              outline: none;
+              border: 0px; }
         .head .headers .user-profile .profile-img #name {
           padding: 10px;
           font-size: 1rem;
           font-weight: 700; }
+        .head .headers .user-profile .profile-img #message-chatbox {
+          padding: 10px; }
       .head .headers .user-profile .profile-status {
         padding: 10px;
         font-size: 1rem;

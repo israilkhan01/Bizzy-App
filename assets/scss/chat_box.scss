@@ -4,7 +4,7 @@
     right: 0;
     width: 300px;
     height: 200px;
-    background-color:wheat;
+    background-color:grey;
     border: 1px solid black;
     padding: 30px;
     .chatting-box{
@@ -28,7 +28,7 @@
                 span{
                     display: inline-block;
                     padding: 15px;
-                    background-color: #ffa0a0;
+                    background-color: lightgray;
                }
             }
             .self-message{
@@ -39,7 +39,7 @@
                     
                     display: inline-block;
                     padding: 15px;
-                    background-color: #a0dcff;
+                    background-color: lightskyblue;
                 }
             
             }

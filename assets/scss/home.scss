@@ -2,34 +2,42 @@ $primarycolor:#f3f3f6;
 // $primarycolor:;
 #post-layout{
             // background-color: $primarycolor;
-            background-image: linear-gradient(90deg, white 51%,skyblue );
+            background-color: rgba(var(--b3f,250,250,250),1);
             border: 0.1px $primarycolor solid;
             display: flex;
-            padding-top: 65px;
+            padding-top: 64px;
             flex-wrap: wrap;
             flex-direction:column;
             justify-content: space-between;
             position: relative;
             
             .create-post{
-                // background-color:$primarycolor;
-                padding: 0;
-                width: 70%;
-                position: relative;
-                div{ 
-                   
-                    h3{ 
-                        
-                        padding-left: 10px;
+                width: 50%;
+                .posting{ 
+                    background-color:$primarycolor;
+                    padding: 0;
+                    width: 100%;
+                    position: inherit;
+                    border:1px solid lightgrey;
+                
+                    z-index: 12;
+                    h3{  
+                        width: 90%;
+                        border:2px solid lightgrey;
+                        left:3%;
+                        position: relative;
+                        padding: 5px;
                     }
                  }
                 #new-post-form{
+                    width: 90%;
                     margin:0;
                     padding: 20px;
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: row;
-                    border-bottom: 0.5px solid lightgrey;
+                    
+                    // z-index: 10;
                     #post-text{
                         width: 80%;
                         border-radius: 5px;
@@ -146,49 +154,7 @@ $primarycolor:#f3f3f6;
                 }
             }
         }
-        .friends{
-            position: fixed;
-            right: 0;
-            height: 100%;
-            width: 28%;
-            padding: 20px;
-            // background-color:$primarycolor;
-            border-left: black 5px solid;
-            .friend-list{
-                width: 90%;
-                height: 200px;
-                border: 10px black solid;
-                background-color: $primarycolor;
-                border-radius: 5px;
-                padding: 10px;
-                position: relative;
-                overflow: auto;
-                z-index: 5500;
-           
-                .friend-x{
-                    display: flex;  
-                    list-style: none; 
-                    img{
-                        padding: 10px;
-                    }  
-                    .friend{
-                        padding: 10px;
-                        position: sticky;
-                        z-index: 100;
-                        a{
-                            color: black;
-                            text-decoration: none;
-                            &:hover{
-                                color: grey;
-                                transition:  ease-in-out 0.1s;
-                                font-size: large;                        }
-                        }
-                    }
-                }
-            }
-
-        }
-     
+       
 }
 
 

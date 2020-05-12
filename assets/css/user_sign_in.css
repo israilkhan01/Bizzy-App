@@ -1,9 +1,28 @@
 main {
   text-align: center;
-  padding: 100px; }
+  display: flex;
+  padding: 200px;
+  background-image: url("../images/sm.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between; }
+  main .title-name {
+    width: 60%;
+    background-color: #ffffff82;
+    top: 20px;
+    position: relative;
+    border-radius: 10px; }
+    main .title-name .Title {
+      padding: 8px;
+      background-color: #0000008f;
+      color: white; }
+    main .title-name .description {
+      color: black; }
   main .sign-in {
     position: relative;
-    top: 70px;
+    top: 20px;
     height: 250px;
     width: 300px;
     padding: 50px;
@@ -38,3 +57,11 @@ main {
           background-color: grey;
           font-weight: bold;
           border-radius: 10px; }
+      main .sign-in .form-div .google-sign {
+        height: 60px; }
+        main .sign-in .form-div .google-sign a {
+          color: blanchedalmond; }
+          main .sign-in .form-div .google-sign a::after {
+            content: " Sign in with Google";
+            font-weight: 700;
+            font-size: 20px; }

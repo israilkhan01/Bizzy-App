@@ -1,0 +1,42 @@
+.friends{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 45%;
+    padding: 15px;
+    // background-color:$primarycolor;
+    border-left: black 5px solid;
+    .friend-list{
+        width: 30%;
+        height: 500px;
+        border: 5px black solid;
+        // background-color: $primarycolor;
+        border-radius: 5px;
+        padding: 10px;
+        position: relative;
+        overflow: auto;
+        z-index: 5500;
+   
+        .friend-x{
+            display: flex;  
+            list-style: none; 
+            img{
+                padding: 10px;
+            }  
+            .friend{
+                padding: 10px;
+                position: sticky;
+                z-index: 100;
+                a{
+                    color: black;
+                    text-decoration: none;
+                    &:hover{
+                        color: grey;
+                        transition:  ease-in-out 0.1s;
+                        font-size: large;                        }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+<h4>Friends List</h4>
+        <div class="friend-list">
+            <%for(x of all_users.reverse()){%>
+                <div class="friend-x">
+                    <div>
+                        <img src="<%= x.avatar %>" alt="<%= x.name %>" width="30" height="30">
+                    </div>
+                    <div class="friend">
+                        <li><a href="users/profile/<%=x.id%>"><%=x.name%></a></li>
+                    </div>
+                </div>
+                
+                <%}%>
+        </div>

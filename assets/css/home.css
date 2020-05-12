@@ -1,25 +1,34 @@
 #post-layout {
-  background-image: linear-gradient(90deg, white 51%, skyblue);
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
   border: 0.1px #f3f3f6 solid;
   display: flex;
-  padding-top: 65px;
+  padding-top: 64px;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   position: relative; }
   #post-layout .create-post {
-    padding: 0;
-    width: 70%;
-    position: relative; }
-    #post-layout .create-post div h3 {
-      padding-left: 10px; }
+    width: 50%; }
+    #post-layout .create-post .posting {
+      background-color: #f3f3f6;
+      padding: 0;
+      width: 100%;
+      position: inherit;
+      border: 1px solid lightgrey;
+      z-index: 12; }
+      #post-layout .create-post .posting h3 {
+        width: 90%;
+        border: 2px solid lightgrey;
+        left: 3%;
+        position: relative;
+        padding: 5px; }
     #post-layout .create-post #new-post-form {
+      width: 90%;
       margin: 0;
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
-      border-bottom: 0.5px solid lightgrey; }
+      flex-direction: row; }
       #post-layout .create-post #new-post-form #post-text {
         width: 80%;
         border-radius: 5px; }
@@ -97,36 +106,3 @@
               width: 90%;
               padding: 7px;
               border-radius: 5px; }
-  #post-layout .friends {
-    position: fixed;
-    right: 0;
-    height: 100%;
-    width: 28%;
-    padding: 20px;
-    border-left: black 5px solid; }
-    #post-layout .friends .friend-list {
-      width: 90%;
-      height: 200px;
-      border: 10px black solid;
-      background-color: #f3f3f6;
-      border-radius: 5px;
-      padding: 10px;
-      position: relative;
-      overflow: auto;
-      z-index: 5500; }
-      #post-layout .friends .friend-list .friend-x {
-        display: flex;
-        list-style: none; }
-        #post-layout .friends .friend-list .friend-x img {
-          padding: 10px; }
-        #post-layout .friends .friend-list .friend-x .friend {
-          padding: 10px;
-          position: sticky;
-          z-index: 100; }
-          #post-layout .friends .friend-list .friend-x .friend a {
-            color: black;
-            text-decoration: none; }
-            #post-layout .friends .friend-list .friend-x .friend a:hover {
-              color: grey;
-              transition: ease-in-out 0.1s;
-              font-size: large; }
