@@ -65,12 +65,10 @@ class PostComments{
                     <li id="comments">
                         <small>
                             ${comment.user.name}
-                        </small>
-                        <% if((locals.user)&&(locals.user.id==comment.user.id||locals.user.id==post.user.id)){%>
+                        </small>  
                         <small>
                         <a href="comments/destroy/${comment._id}" id="delete-comment"><i class="far fa-trash-alt"></i></a>
                         </small>
-                        <%}%>
                     </li> 
                         <br>
                     <li class="comment-content">
@@ -92,7 +90,7 @@ class PostComments{
                 success: function(data){
                     console.log(data);
                     $(`#comment-${data.data.comment_id}`).remove();
-
+                    
                     new Noty({
                         theme: 'relax',
                         text: "Comment Deleted",

@@ -9,12 +9,13 @@
   position: relative; }
   #post-layout .create-post {
     width: 50%;
-    border-right: 5px solid black; }
+    border-right: 1px solid grey; }
     #post-layout .create-post .posting {
-      background-image: linear-gradient(90deg, whitesmoke, skyblue);
+      background-image: linear-gradient(90deg, #FF5722, #009688);
       padding: 0;
       position: inherit;
-      border-bottom: 2px solid black;
+      border-bottom: 1px solid black;
+      border-radius: 0px 0px 10px 10px;
       z-index: 12; }
       #post-layout .create-post .posting h3 {
         border-bottom: 1.5px solid black;
@@ -74,15 +75,24 @@
           color: white;
           border-radius: 5px; }
         #post-layout .create-post .posts .post-s .post-comments {
+          background-color: lightcyan;
           padding: 0;
           border-top: 0.5px lightgrey solid; }
           #post-layout .create-post .posts .post-s .post-comments .comment-form {
             padding: 10px;
             margin: 0; }
+            #post-layout .create-post .posts .post-s .post-comments .comment-form #write-comment {
+              width: 60%;
+              height: 30px;
+              font-size: 16px;
+              border: 1px solid black;
+              border-radius: 5px; }
+              #post-layout .create-post .posts .post-s .post-comments .comment-form #write-comment:focus {
+                outline: none; }
             #post-layout .create-post .posts .post-s .post-comments .comment-form .add-comment {
               border: 0;
               padding: 0;
-              height: 22px;
+              height: 29px;
               background-color: black;
               border-radius: 5px;
               color: white;
