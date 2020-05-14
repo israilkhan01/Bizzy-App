@@ -1,5 +1,5 @@
-<p class="comments">
-    <li id="comments">
+<div class="comments">
+    <div id="comments">
         <small>
             <%=comment.user.name%>
         </small>
@@ -8,9 +8,10 @@
         <a href="comments/destroy/<%=comment.id%>" id="delete-comment"><i class="far fa-trash-alt"></i></a>
         </small>
         <%}%>
-    </li> 
-        <br>
-    <li class="comment-content">
+    </div> 
+    <br>
+    <div class="comment-content">
         <%=comment.content%>
-    </li>
-</p>
+    </div>
+    <br>
+</div>

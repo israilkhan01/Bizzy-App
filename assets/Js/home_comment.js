@@ -60,21 +60,22 @@ class PostComments{
     newCommentDom(comment){
         // CHANGE :: show the count of zero likes on this comment
 
-        return $(`<li id="comment-${ comment._id }">
-                    <p class="comments">
-                    <li id="comments">
+        return $(`<li id="comment-${comment._id}">
+                    <div class="comments">
+                    <div id="comments">
                         <small>
                             ${comment.user.name}
                         </small>  
                         <small>
                         <a href="comments/destroy/${comment._id}" id="delete-comment"><i class="far fa-trash-alt"></i></a>
                         </small>
-                    </li> 
+                    </div> 
                         <br>
-                    <li class="comment-content">
+                    <div class="comment-content">
                         ${comment.content}
-                    </li>
-                </p>
+                    </div>
+                    <br>
+                </div>
 
                 </li>`);
     }
