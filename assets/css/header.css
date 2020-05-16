@@ -30,6 +30,7 @@
           margin: 10 0 10 0;
           border: white 3px solid; }
     .head .headers .user-profile {
+      position: static;
       margin: 10;
       padding: 0;
       width: 70%;
@@ -37,8 +38,8 @@
       margin-right: 10px;
       list-style: none;
       display: flex;
-      -webkit-box-align: stretch;
-      -webkit-box-orient: horizontal;
+      flex-wrap: wrap;
+      flex-direction: row;
       justify-content: space-between; }
       .head .headers .user-profile .profile-img {
         height: 28px;
@@ -94,4 +95,12 @@
         font-size: 1rem;
         font-weight: 700; }
       .head .headers .user-profile .offline {
-        display: inline; }
+        height: 24px;
+        text-align: center;
+        position: relative;
+        padding: 8px;
+        margin-right: 10px;
+        font-size: 20px;
+        font-weight: 550;
+        border: 0.1px solid white;
+        right: -85%; }

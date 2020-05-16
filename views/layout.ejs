@@ -25,9 +25,9 @@
         <script>
             <%if(flash.success && flash.success.length>0){%>
              new Noty({
-                   theme: 'relax',
+                   theme: 'metroui',
                     type: 'success',
-                    layout: 'topCenter',
+                    layout: 'topRight',
                     text: '<%=flash.success%>',
                     timeout:2000
 
@@ -35,9 +35,9 @@
             <%}%>
             <%if(flash.error && flash.error.length>0){%>
              new Noty({
-                   theme: 'relax',
+                   theme: 'metroui',
                     type: 'error',
-                    layout: 'topCenter',
+                    layout: 'topRight',
                     text: '<%=flash.error%>',
                     timeout:2000
 

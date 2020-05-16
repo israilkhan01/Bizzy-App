@@ -39,7 +39,7 @@ class PostComments{
                     // CHANGE :: enable the functionality of the toggle like button on the new comment
                     // new ToggleLike($(' .toggle-like-button', newComment));
                     new Noty({
-                        theme: 'relax',
+                        theme: 'metroui',
                         text: "Comment published!",
                         type: 'success',
                         layout: 'topRight',
@@ -96,7 +96,7 @@ class PostComments{
                     $(`#comment-${data.data.comment_id}`).remove();
                     
                     new Noty({
-                        theme: 'relax',
+                        theme: 'metroui',
                         text: "Comment Deleted",
                         type: 'success',
                         layout: 'topRight',

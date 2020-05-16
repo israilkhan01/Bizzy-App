@@ -40,6 +40,7 @@ $primary-color: #010101 ;
         }
        }
        .user-profile{
+           position: static;
             margin: 10;
             padding: 0;
             width: 70%;
@@ -47,8 +48,10 @@ $primary-color: #010101 ;
             margin-right: 10px;
             list-style: none;
             display: flex;
-            -webkit-box-align: stretch;
-            -webkit-box-orient: horizontal;
+            flex-wrap: wrap;
+            flex-direction: row;
+            // -webkit-box-align: stretch;
+            // -webkit-box-orient: horizontal;
             justify-content: space-between;
            .profile-img{
                height: 28px;
@@ -117,8 +120,18 @@ $primary-color: #010101 ;
                font-weight:700 ;
             }
            .offline{
-               display: inline;
-           }
+            //    width: 70px;
+               height: 24px;
+               text-align: center;
+            position: relative;
+            padding: 8px;
+            margin-right: 10px;
+            font-size: 20px;
+            font-weight: 550;
+            border: 0.1px solid white;
+            right: -85%;   
+        }
+
        }
  }
 }
