@@ -9,23 +9,23 @@
   position: relative; }
   #post-layout .create-post {
     width: 50%;
-    border-right: 1px solid grey; }
+    border-right: 1px solid grey;
+    background-color: #e6ecf0; }
     #post-layout .create-post .posting {
-      background-image: linear-gradient(90deg, #FF5722, #009688);
+      background-color: white;
       padding: 0;
       position: inherit;
-      border-bottom: 1px solid black;
-      border-radius: 0px 0px 10px 10px;
+      border-bottom: 2px solid #e6ecf0;
       z-index: 12; }
       #post-layout .create-post .posting h3 {
-        border-bottom: 1.5px solid black;
+        border-bottom: 0.2px solid #e6ecf0;
         margin: 0px;
         position: relative;
-        padding: 5px; }
+        padding: 15px; }
     #post-layout .create-post #new-post-form {
       width: 90%;
       margin: 0;
-      padding: 20px;
+      padding: 25px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row; }
@@ -48,36 +48,50 @@
         border-radius: 2px;
         cursor: pointer; }
     #post-layout .create-post .posts {
-      width: 95%;
+      width: 100%;
       align-items: center; }
       #post-layout .create-post .posts ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        padding: 30px; }
+        padding: 30px 0px 30px 0px; }
       #post-layout .create-post .posts .post-s {
-        padding: 10px;
-        border: 1px black solid;
-        border-radius: 5px;
+        background-color: white;
+        padding: 30px;
         position: relative;
-        margin: px; }
-        #post-layout .create-post .posts .post-s .post-header .image {
-          border-radius: 50%; }
-        #post-layout .create-post .posts .post-s .post-header .post-user {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          font-weight: bold;
-          font-size: 15px;
-          position: relative;
-          top: -8px; }
-        #post-layout .create-post .posts .post-s .post-content {
-          padding: 10px;
-          background-color: grey;
-          color: white;
-          border-radius: 5px; }
+        margin-bottom: 20px; }
+        #post-layout .create-post .posts .post-s:hover {
+          transition: 0.8s;
+          background-color: #e6ecf0; }
+        #post-layout .create-post .posts .post-s .post-header {
+          padding: 15px;
+          border-top: 0.5px solid #e6ecf0; }
+          #post-layout .create-post .posts .post-s .post-header .user-header {
+            display: flex;
+            justify-content: space-between; }
+            #post-layout .create-post .posts .post-s .post-header .user-header .image {
+              border-radius: 50%;
+              margin-right: 5px; }
+            #post-layout .create-post .posts .post-s .post-header .user-header .post-user {
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              font-weight: bold;
+              font-size: 17px;
+              position: relative;
+              top: -8px; }
+            #post-layout .create-post .posts .post-s .post-header .user-header .post-op-container .post-option-button {
+              color: black;
+              background-color: transparent;
+              border: none; }
+            #post-layout .create-post .posts .post-s .post-header .user-header .post-op-container .delete-post {
+              visibility: hidden; }
+          #post-layout .create-post .posts .post-s .post-header .post-content {
+            padding: 10px;
+            color: black;
+            border-radius: 5px; }
         #post-layout .create-post .posts .post-s .post-comments {
-          background-color: lightcyan;
           padding: 0;
-          border-top: 0.5px lightgrey solid; }
+          border-top: 0.5px lightgrey solid;
+          border-radius: 5px; }
           #post-layout .create-post .posts .post-s .post-comments .comment-form {
             padding: 10px;
             margin: 0; }
@@ -102,16 +116,31 @@
                 color: black;
                 transition: 0.5s; }
           #post-layout .create-post .posts .post-s .post-comments .post-comments-list {
+            position: relative;
+            left: 8%;
             padding: 10px; }
-            #post-layout .create-post .posts .post-s .post-comments .post-comments-list li small {
-              color: #003923;
-              background-color: #e9ebee;
-              padding: 5px;
-              border-radius: 5px;
-              font-weight: bold;
-              font-size: 12px; }
-            #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comment-content {
-              background-color: #e9ebee;
-              width: 90%;
-              padding: 7px;
-              border-radius: 5px; }
+            #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comments {
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: space-evenly;
+              margin-bottom: 10px; }
+              #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comments #comments .image-comment {
+                border-radius: 50%; }
+              #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comments #comments small {
+                position: relative;
+                top: -5px;
+                color: #003923;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 14px; }
+              #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comments .comment-content {
+                border-top: 0.5px solid lightgrey;
+                width: 70%;
+                padding: 7px;
+                border-radius: 5px; }
+                #post-layout .create-post .posts .post-s .post-comments .post-comments-list .comments .comment-content .comment-text {
+                  width: 100%;
+                  overflow: visible;
+                  margin: 0; }

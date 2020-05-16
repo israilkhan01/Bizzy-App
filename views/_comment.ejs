@@ -1,7 +1,11 @@
 <div class="comments">
     <div id="comments">
+        <a href="/users/profile/<%=comment.user.id%>">
+             <img class="image-comment" src="<%=comment.user.avatar%>" alt="" height="25" width="25">
+            </a>
+        
         <small>
-            <%=comment.user.name%>
+            <a href="/users/profile/<%=comment.user.id%>"><%=comment.user.name%> </a> 
         </small>
         <% if((locals.user)&&(locals.user.id==comment.user.id||locals.user.id==post.user.id)){%>
         <small>
@@ -11,7 +15,9 @@
     </div> 
     <br>
     <div class="comment-content">
+       <p class="comment-text">
         <%=comment.content%>
+       </p>
     </div>
     <br>
 </div>

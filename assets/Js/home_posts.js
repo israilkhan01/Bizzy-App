@@ -28,7 +28,7 @@
     //method to create the post in Dom
     let newpostDom=function(post){
          return $(`<div class="post-s" id="post-${post._id}">
-                <p class='post-header'>  
+                <div class='post-header'>  
                     <img class="image" src="${post.user.avatar}" alt="" height="25" width="25">
                     <small class="post-user"> ${ post.user.name } </small>
                     <small>
@@ -38,12 +38,12 @@
                         <li class="post-content">
                         :)- ${post.content}
                     </li>
-                </p>
+                </div>
             
                 <div class="post-comments">
                     
                         <form action="/comments/create"  class="comment-form" method="POST">
-                            <input type="text" name="content" placeholder="Write a comment..." required>
+                            <input type="text" name="content" id="write-comment" placeholder="Write a comment..." required>
                             <input type="hidden" name="post" value= "${post._id} ">
                             <input type="submit" class="add-comment" value="Add Comment"> 
                         </form>

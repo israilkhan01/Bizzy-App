@@ -14,7 +14,7 @@ module.exports.create=async function(req,res){
                  });
             post.comments.push(comment);
             post.save();
-            comment=await comment.populate('user','name email').execPopulate();
+            comment=await comment.populate('user','name email avatar').execPopulate();
            let job= queue.create('emails',comment).save(function(error){
                if(error){
                    console.log('error in creating a queue',error)

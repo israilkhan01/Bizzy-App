@@ -63,12 +63,15 @@ class PostComments{
         return $(`<li id="comment-${comment._id}">
                     <div class="comments">
                     <div id="comments">
-                        <small>
+                    <a href="/users/profile/${comment.user._id}">
+                       <img class="image-comment" src="${comment.user.avatar}" alt="" height="25" width="25">
+                     </a>
+                    <small>
                             ${comment.user.name}
-                        </small>  
-                        <small>
+                    </small>  
+                    <small>
                         <a href="comments/destroy/${comment._id}" id="delete-comment"><i class="far fa-trash-alt"></i></a>
-                        </small>
+                    </small>
                     </div> 
                         <br>
                     <div class="comment-content">
@@ -96,7 +99,7 @@ class PostComments{
                         theme: 'relax',
                         text: "Comment Deleted",
                         type: 'success',
-                        layout: 'centre',
+                        layout: 'topRight',
                         timeout: 1500
                         
                     }).show();

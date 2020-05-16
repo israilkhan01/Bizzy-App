@@ -19,14 +19,14 @@
                     </form>
                  </div>
                 <div id="image">
-                    <img src="<%=user.avatar%>" alt="profile" width="27" height="27">
+                    <a href="/users/profile/<%=user.id%>"><img src="<%=user.avatar%>" alt="profile" width="27" height="27"></a>
                 </div>
                 
                 <div id="name">
                     <a href="/users/profile/<%=user.id%>"> <%=user.name%></a> 
                 </div>    
                 <div id="message-chatbox">
-                    <a href=""><i class="fas fa-envelope"></i></a>
+                    <a href=""></a><i class="fas fa-envelope"></i></a>
                 </div>  
                 <div id="notification">
                     <a href="">

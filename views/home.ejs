@@ -5,7 +5,7 @@
         <section class="create-post">
             <div class="posting">
               <%if(locals.user){%>
-                <h3>POST SOMETHING</h3>
+                <h3>HOME</h3>
                 <form action="/posts/create" id="new-post-form" method="POST">
                   <textarea name="content" id="post-text" cols="30" rows="3" placeholder=" Write something here..." required></textarea>
                  <br> <div class="submit-post"> <input type="submit" value="POST" id="post-submit"> </div>
@@ -29,6 +29,7 @@
         <%-include('_chat_box')%>
     </section>
 </div>
+<script src="/js/post_button.js"></script>
 <script src="/js/home_comment.js"></script>
 <script src="/js/home_posts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>

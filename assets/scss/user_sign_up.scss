@@ -1,16 +1,18 @@
 main{
-    text-align: center;
+    text-align: right;
     padding: 100px;
     height: 71vh;
-    background-color: lightgrey;
-    // background-image: url('../images/forest.jpg');
+    // background-color: lightgrey;
+    background-image: url('../images/marshmello_logo-wallpaper-3554x1999.jpg');
+    background-size: cover;
+    background-position: right;
     .sign-up{
         position: relative;
          top: 20px;
          height: 400px;
          width: 350px;
          padding: 50px 100px 50px 100px;
-         background-color:#211f1f;
+         background-color:#ffffff61;
         //  border: 1px solid black;
         box-shadow: 12px 12px 15px 0 rgba(0,0,0,.25);
          border-radius: 5px;
@@ -19,7 +21,7 @@ main{
         h1{
             margin:0;
             padding-bottom: 30px;
-            color: white;
+            color: black;
         }
         .form-div{
             width:100%;
@@ -29,22 +31,23 @@ main{
                 display: inline-block;
                 padding:5%;
                 width: 90%;
-                border: 0.4px whitesmoke solid;
+                border: 0.4px black solid;
                 border-radius: 10px;
                 input{
                     width: 100%;
                     height: 32px;
                     padding: 5px;
                     border:0;
-                    border-bottom: 0.4px whitesmoke solid;
-           
+                    border-bottom: 0.4px black solid;
+                    font-size: 18px;
+                    font-weight: 550;
                     border-radius: 5px;
                     background-color:transparent;
-                    color: white;
+                    color: black;
                     outline: none;
                     &::placeholder{
                         
-                        color: lightgray;
+                        color: grey;
                     }
                 }
                 #name{
@@ -59,12 +62,14 @@ main{
                 #submit{
                     // width: 40%;
                     border: 0;
-                    background-color: grey;
+                    background-color:black;
                     font-weight: bold;
+                    color: white;
                     border-radius: 10px;
                     &:hover{
                         background-color:white;
                         transition: 0.5s;
+                        color: black;
                     }
                 }
             }

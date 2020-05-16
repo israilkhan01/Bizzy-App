@@ -1,16 +1,30 @@
 <div class="post-s" id="post-<%=post._id%>">
-    <p class="post-header">  
-        <img class="image" src="<%=post.user.avatar%>" alt="" height="25" width="25">
-        <small class="post-user"> <%=post.user.name%></small>
+    <div class="post-header"> 
+        <div class="user-header">
+           <div class="post-username">
+                <a href="/users/profile/<%=post.user.id%>">
+                    <img class="image" src="<%=post.user.avatar%>" alt="" height="30" width="30">
+                </a>
+                <small class="post-user">
+                    <a href="/users/profile/<%=post.user.id%>">
+                    <%=post.user.name%> 
+                    </a>
+                </small>
+           </div>
         <%if(locals.user && locals.user.id==post.user.id){%>
-            <small>
-                <a href="posts/destroy/<%=post.id%>" class="delete-post"><i class="far fa-trash-alt"></i></a>
-            </small>
+            <div class="post-op-container">
+                <button class="post-option-button" ><i class="fas fa-caret-down"></i></button>
+                <a href="posts/destroy/<%=post.id%>" id="post-delete-<%=post.id%>" class="delete-post">Delete Post<i class="far fa-trash-alt"></i></a>
+            </div>
         <%}%>
+    </div>
         <li class="post-content">
             :)- <%=post.content%>
          </li>
-    </p>
+         <span class="like-button">
+             <a href=""><i class="fas fa-heart"></i></a>
+         </span>
+        </div>
 
     <div class="post-comments">
         <%if(locals.user){%>
@@ -24,7 +38,7 @@
                 <ul id="post-comments-<%=post._id%>">
                     <%for(comment of post.comments){%>
             
-                    <li id="comment-<%=comment.id%>" >
+                    <li class="commented" id="comment-<%=comment.id%>" >
                         <%-include('_comment')-%>
                     </li>
                     
