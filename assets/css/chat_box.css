@@ -15,7 +15,12 @@
     height: 100%; }
     .chatting .chatting-box .message-header {
       color: white;
-      margin: 0px; }
+      margin: 0px;
+      display: flex;
+      justify-content: space-between; }
+      .chatting .chatting-box .message-header .user-name {
+        position: relative;
+        left: 5px; }
     .chatting .chatting-box .messages {
       list-style: none;
       padding: 5px;

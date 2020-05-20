@@ -18,6 +18,12 @@
         .message-header{
             color: white;
             margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            .user-name{
+                position: relative;
+                left: 5px;
+            }
         }
         .messages{
             list-style: none;

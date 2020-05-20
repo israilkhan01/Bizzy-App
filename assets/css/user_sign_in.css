@@ -70,7 +70,8 @@ main {
           main .sign-in .sign-in-part .form-div .sign-in-form #submit {
             background-color: grey;
             font-weight: bold;
-            border-radius: 10px; }
+            border-radius: 10px;
+            cursor: pointer; }
         main .sign-in .sign-in-part .form-div .google-sign {
           height: 60px; }
           main .sign-in .sign-in-part .form-div .google-sign a {
