@@ -21,6 +21,14 @@
       .chatting .chatting-box .message-header .user-name {
         position: relative;
         left: 5px; }
+      .chatting .chatting-box .message-header .remove-message-box {
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+        position: relative;
+        color: white;
+        right: 5px; }
     .chatting .chatting-box .messages {
       list-style: none;
       padding: 5px;

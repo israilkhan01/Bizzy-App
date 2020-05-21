@@ -11,12 +11,13 @@
                     </a>
                 </small>
            </div>
-        <%if(locals.user && locals.user.id==post.user.id){%>
             <div class="post-op-container">
                 <button class="post-option-button" ><i class="fas fa-caret-down"></i></button>
+                <%if(locals.user && locals.user.id==post.user.id){%>
                 <a href="posts/destroy/<%=post.id%>" id="post-delete-<%=post.id%>" class="delete-post">Delete Post<i class="far fa-trash-alt"></i></a>
+                <%}%>
             </div>
-        <%}%>
+        
     </div>
         <li class="post-content">
             :)- <%=post.content%>
