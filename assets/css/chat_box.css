@@ -1,11 +1,8 @@
 .chatting {
-  visibility: hidden;
-  position: fixed;
-  bottom: 25px;
-  right: 25%;
-  width: 300px;
+  width: 100%;
   height: 350px;
   background-color: black;
+  position: relative;
   border: 1px solid black;
   border-radius: 15px;
   padding: 10px 2px 0px 2px; }

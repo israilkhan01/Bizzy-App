@@ -21,13 +21,19 @@
             </div>
         </section>
     
-
+    <!-- <section class="chatbox">
+            
+    </section> -->
     <section class="friends">
-        <%-include('friends')%>
+
+        <div class="chatbox">
+            <%-include('_chat_box')%>
+        </div>
+        <div>
+            <%-include('friends')%>
+        </div>
     </section>
-    <section class="chatbox">
-        <%-include('_chat_box')%>
-    </section>
+   
 </div>
 <script src="/js/post_button.js"></script>
 <script src="/js/home_comment.js"></script>
