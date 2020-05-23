@@ -3,7 +3,7 @@
   padding-top: 64px; }
   #post-layout .container1 {
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;

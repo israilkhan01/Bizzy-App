@@ -19,12 +19,14 @@ main .user-profile {
     main .user-profile .profile-page .user-details .name {
       font-size: 28px; }
     main .user-profile .profile-page .edit-profile-button {
+      width: 80%;
       height: 30px;
       padding: 3px;
       background-color: transparent;
       border: 1px solid  navy;
       border-radius: 4px; }
     main .user-profile .profile-page .editform {
+      display: none;
       height: 200px;
       position: relative;
       padding: 20px 10px 0 10px;

@@ -35,7 +35,7 @@ main{
                         }
                 }
                 .edit-profile-button{
-                    
+                        width: 80%;
                         height: 30px;
                         padding: 3px;
                         background-color: transparent;
@@ -43,6 +43,8 @@ main{
                         border-radius: 4px;
                 }
                 .editform{
+                        display: none;
+                 
                         height: 200px;
                         position: relative;
                         padding: 20px 10px 0 10px ;
