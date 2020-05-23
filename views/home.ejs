@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/home.css">
 <link rel="stylesheet" href="/css/friends.css">
 <div id="post-layout">
-
+    <div class="container1">
         <section class="create-post">
             <div class="posting">
               <%if(locals.user){%>
@@ -20,20 +20,18 @@
                 </ul>
             </div>
         </section>
-    
-    <!-- <section class="chatbox">
-            
-    </section> -->
-    <section class="friends">
-
-        <div class="chatbox">
-            <%-include('_chat_box')%>
-        </div>
-        <div>
-            <%-include('friends')%>
-        </div>
-    </section>
    
+    </div>
+<div class="container2">
+
+    <div class="notification-bar">
+        <h2>Bizzy App</h2>
+        <%-include('_chat_box')%>
+    </div>
+    <div  class="friends">
+        <%-include('friends')%>
+    </div>
+    </div>
 </div>
 <script src="/js/post_button.js"></script>
 <script src="/js/home_comment.js"></script>

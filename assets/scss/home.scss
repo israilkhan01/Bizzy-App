@@ -2,22 +2,23 @@ $primarycolor:#f3f3f6;
 $secondarycolor:rgb(230, 236, 240);
 // $primarycolor:;
 #post-layout{
-            background-color: $secondarycolor;
-            // background-color: rgba(var(--b3f,250,250,250),1);
-        
-            border: 0.1px $primarycolor solid;
+        display: flex;
+        padding-top: 64px;
+      .container1{
+            // border: 0.5px black solid;
             display: flex;
-            padding-top: 64px;
+            background-color: white;
+            
             flex-wrap: wrap;
             flex-direction:row;
             justify-content:center;
             position: relative;
-            width: 100%;
+            width: 47%;
             
             .create-post{
                 position: relative;
-                width: 50%;
-                border-right: 1px solid grey;
+                width: 85%;
+                // border-right: 1px solid grey;
                 background-color:$secondarycolor;
                 .posting{ 
                     // background-image: linear-gradient(90deg,#FF5722 , #009688 );
@@ -224,7 +225,7 @@ $secondarycolor:rgb(230, 236, 240);
                 }
             }
         }
-       
+          
+ }
 }
-
 
