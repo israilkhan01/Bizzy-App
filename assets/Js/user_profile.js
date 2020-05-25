@@ -1,5 +1,8 @@
 
 let editButton=$('.edit-profile-button');
 editButton.click(function(){
-    $('.editform').toggle("slow");
-})
+    $('body').css('opacity','0.6');
+    $('.editform').css('display','block');
+    // $('.editform').toggle("slow");
+});
+

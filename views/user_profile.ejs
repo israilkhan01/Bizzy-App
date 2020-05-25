@@ -1,27 +1,25 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 <main>
     <div class="user-profile">
-    <div class="profile-page" id="profile-<%=profile_user.id%>">
+       <div class="profile-page" id="profile-<%=profile_user.id%>">
        <div class="profile-image">
-        <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="170" height="170">
-    </div>   
+          <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="150" height="150">
+        </div>   
         <section class="user-details">
-            <p class="name"><%=profile_user.name%> </p>
-        </section>
+
+            <div class="name-edit">
+                <div class="name"><%=profile_user.name%> </div>
         
-        <%if(user.id==profile_user.id){%> 
-           <button class="edit-profile-button">
-               Edit profile
-      
-                <form  class="editform" action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" >
-                    <input type="text" name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
-                    <input type="email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
-                    <input type="file" name="avatar" placeholder="profile Picture">
-                    <input type="submit" value="Upload"> 
-                 </form>
-    
-           </button>
-              
+               <%if(user.id==profile_user.id){%> 
+                <button class="edit-profile-button">
+                      Edit profile
+                 </button>
+               <div class="sett">
+                <a href=""><i class="fas fa-sliders-h"></i></a>
+               </div>
+            </div>
+          
+      </section>   
         <%}else{%>
                 <!-- else show only the profile info -->
                 <div class="user-details">
@@ -30,7 +28,19 @@
         <%}%>
     
     </div>
-</div>
+   </div>
+  <div class="edit-pops">
+    <div class="edit-pops-header">
+        <div>Edit Profile</div>
+        <div><i class="fas fa-times"></i></div>
+    </div>
+    <form  class="editform" action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" >
+      <input type="text" name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
+      <input type="email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
+      <input type="file" name="avatar" placeholder="profile Picture">
+      <input type="submit" value="Upload"> 
+  </form>
+  </div>
 </main>
 <script src="/js/user_profile.js">
 
