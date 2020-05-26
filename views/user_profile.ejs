@@ -17,30 +17,53 @@
                <div class="sett">
                 <a href=""><i class="fas fa-sliders-h"></i></a>
                </div>
+               <%}%>
             </div>
-          
+            <div class="bio">
+                  <div>
+                    About
+                    <%=profile_user.bio%>
+                  </div>
+            </div>
       </section>   
-        <%}else{%>
-                <!-- else show only the profile info -->
-                <div class="user-details">
-                     <p><%=profile_user.name%> </p>
-                </div>
-        <%}%>
-    
     </div>
    </div>
+   <%if(user.id==profile_user.id){%> 
   <div class="edit-pops">
     <div class="edit-pops-header">
         <div>Edit Profile</div>
         <div><i class="fas fa-times"></i></div>
     </div>
     <form  class="editform" action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST" >
-      <input type="text" name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
-      <input type="email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
-      <input type="file" name="avatar" placeholder="profile Picture">
-      <input type="submit" value="Upload"> 
+       <div id="pro-name" class="fm">
+        <h4>Name</h4>
+        <div class="name-text vip">
+          <input type="text"  name="name" placeholder="your Name" value="<%=profile_user.name%>" required>
+        </div>
+      </div>
+       <div class="fm">
+        <h4>Bio</h4>
+        <div class="bio-txt vip">
+          <textarea name="bio" id="bio-text"  placeholder=" Write bio here..."  style="height: 85px;"></textarea>
+        </div>
+      </div>
+       <div id="pro-email" class="fm">
+        <h4>Email</h4>
+        <div class="mails vip">
+          <input type="email" id="pro-email" name="email" placeholder="your email" value="<%=profile_user.email%>" required>
+        </div>
+      </div>
+        <div  class="fm">
+        <h4>change Profile</h4>
+       <div class="pro-pic vip">
+        <input type="file" id="pro-pic" name="avatar" placeholder="profile Picture">
+       </div>
+      </div>
+      <input type="submit" value="Upload" id="upload-profile"> 
   </form>
   </div>
+  <%}%>
+    
 </main>
 <script src="/js/user_profile.js">
 
