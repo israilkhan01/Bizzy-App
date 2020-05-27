@@ -1,17 +1,36 @@
-const User=require('../models/user')
+const User=require('../models/user');
+const Post=require('../models/post');
 const fs=require('fs');
 const path=require('path');
 
 // let keep it same as before
-module.exports.profile=function(req,res){
-   User.findById(req.params.id,function(err,users){
-    return res.render('user_profile',{
-        title:"Profile",
-        profile_user:users
-    });
-   })
+module.exports.profile=async function(req,res){
+
+   try{
+         let users=await User.findById(req.params.id);
+         let posts=await Post.find({})
+        .sort('-createdAt')
+        .populate('user')
+        .populate({
+            path:'comments',
+            populate:{
+                path:'user'
+            }
+        });
+        return res.render('user_profile',{
+            title:"Profile",
+            profile_user:users,
+            posts:posts
+        });
+
+   }catch(err){
+       console.log('error on loading profile page---',err)
+   }
+   
+   
     
 }
+
 module.exports.update= async function(req,res){
    
     if(req.user.id==req.params.id){

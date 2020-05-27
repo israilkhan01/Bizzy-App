@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="/css/user_profile.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/posts.css">
+
 <main>
     <div class="user-profile">
        <div class="profile-page" id="profile-<%=profile_user.id%>">
@@ -27,6 +30,15 @@
             </div>
       </section>   
     </div>
+      <div class="posts">
+        <ul>
+          <%for(post of posts){%>
+            <%if(post.user._id==profile_user.id){%>
+              <%-include('_post')-%>
+            <%}%>
+          <%}%>
+      </ul>
+      </div>
    </div>
    <%if(user.id==profile_user.id){%> 
   <div class="edit-pops">
