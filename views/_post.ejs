@@ -6,13 +6,13 @@
                     <img class="image" src="<%=post.user.avatar%>" alt="" height="30" width="30">
                 </a>
                 <small class="post-user">
-                    <a href="/users/profile/<%=post.user.id%>">
+                    <a href="/users/profile/<%=post.user.id%>" class="user-name">
                     <%=post.user.name%> 
                     </a>
                 </small>
            </div>
             <div class="post-op-container">
-                <button class="post-option-button" ><i class="fas fa-caret-down"></i></button>
+                <button class="post-option-button" id="post-option-<%=post.id%>"><i class="fas fa-caret-down"></i></button>
                 <%if(locals.user && locals.user.id==post.user.id){%>
                 <a href="posts/destroy/<%=post.id%>" id="post-delete-<%=post.id%>" class="delete-post">Delete Post<i class="far fa-trash-alt"></i></a>
                 <%}%>

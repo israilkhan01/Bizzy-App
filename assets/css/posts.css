@@ -21,15 +21,22 @@
         font-size: 17px;
         position: relative;
         top: -8px; }
+        .post-s .post-header .user-header .post-user .user-name {
+          text-decoration: none; }
       .post-s .post-header .user-header .post-op-container .post-option-button {
         color: black;
         background-color: transparent;
-        border: none; }
+        border: none;
+        cursor: pointer; }
       .post-s .post-header .user-header .post-op-container .delete-post {
-        visibility: hidden; }
+        text-decoration: none;
+        display: none;
+        background-color: black;
+        color: whitesmoke; }
     .post-s .post-header .post-content {
       padding: 10px;
       color: black;
+      text-align: start;
       border-radius: 5px; }
   .post-s .post-comments {
     padding: 0;

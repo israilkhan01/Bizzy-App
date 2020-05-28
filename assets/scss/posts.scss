@@ -27,7 +27,10 @@ $secondarycolor:rgb(230, 236, 240);
             font-weight: bold;
             font-size: 17px;
             position: relative;
-            top:-8px
+            top:-8px;
+            .user-name{
+                text-decoration: none;
+            }
             
         }
         .post-op-container{
@@ -35,9 +38,16 @@ $secondarycolor:rgb(230, 236, 240);
                 color: black;
                 background-color: transparent;
                 border: none;
+                cursor: pointer;
             }
             .delete-post{
-                visibility: hidden;
+                // visibility: hidden;
+                // display: inline;
+                text-decoration: none;
+                display: none;
+                background-color: black;
+                color: whitesmoke;
+                
             }
             
         }
@@ -47,6 +57,7 @@ $secondarycolor:rgb(230, 236, 240);
         padding: 10px;
         // background-color: $secondarycolor;
         color: black;
+        text-align: start;
         border-radius: 5px;
         }
     }
