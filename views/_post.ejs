@@ -36,7 +36,7 @@
             </form>
         <%}%>
             <div class="post-comments-list">
-                <ul id="post-comments-<%=post._id%>">
+                <ul style="padding: 0; list-style: none;" id="post-comments-<%=post._id%>">
                     <%for(comment of post.comments){%>
             
                     <li class="commented" id="comment-<%=comment.id%>" >

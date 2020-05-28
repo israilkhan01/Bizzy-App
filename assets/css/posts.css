@@ -61,6 +61,7 @@
     .post-s .post-comments .post-comments-list {
       position: relative;
       left: 8%;
+      list-style: none;
       padding: 10px; }
       .post-s .post-comments .post-comments-list .comments {
         position: relative;

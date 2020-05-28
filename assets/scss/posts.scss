@@ -55,6 +55,7 @@ $secondarycolor:rgb(230, 236, 240);
     //    background-color: $primarycolor;
     //    text-align: center;
         // width: 90%;
+      
         padding: 0;
         border-top: 0.5px lightgrey solid;
         border-radius: 5px;
@@ -90,7 +91,7 @@ $secondarycolor:rgb(230, 236, 240);
         .post-comments-list{
             position: relative;
             left: 8%;
-            
+            list-style: none;
             padding: 10px;
             .comments{
                 position: relative;
