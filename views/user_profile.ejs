@@ -29,17 +29,20 @@
                   </div>
             </div>
       </section>   
-    </div>
-      <div class="posts">
-        <h3 style="background-color: white; margin: 0;">POSTS</h3>
-        <ul style="list-style: none; padding: 0;">
+      <section class="posts" style="width: 100%;">
+        <h3 style="background-color: #484747; padding-top: 8px;color: whitesmoke; padding-bottom: 8px;">POSTS<i class="fa fa-bars" aria-hidden="true" style="position: relative; left:
+          5px"></i>
+        </h3>
+        <ul  style="list-style: none; padding: 0;">
           <%for(post of posts){%>
             <%if(post.user._id==profile_user.id){%>
               <%-include('_post')-%>
             <%}%>
           <%}%>
       </ul>
-      </div>
+      </section>
+    </div>
+     
    </div>
    <%if(user.id==profile_user.id){%> 
   <div class="edit-pops">
