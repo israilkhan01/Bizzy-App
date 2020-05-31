@@ -51,7 +51,7 @@ $secondarycolor:rgb(230, 236, 240);
                        list-style: none;
                        margin: 0;
                        padding: 0;
-                       padding: 30px 0px 30px 0px;
+                    //    padding: 30px 0px 30px 0px;
                    }
                 }                
                 #new-post-form{
@@ -66,6 +66,7 @@ $secondarycolor:rgb(230, 236, 240);
                     #post-text{
                         width: 80%;
                         border-radius: 5px;
+                        resize: vertical;
                         &:focus{
                             outline: none;
                         }

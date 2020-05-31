@@ -45,9 +45,10 @@ module.exports.update= async function(req,res){
                 user.email=req.body.email;
                 user.bio=req.body.bio;
                 if(req.file){
-                    // if(user.avatar){
-                    //     fs.unlinkSync(path.join(__dirname+'..'+user.avatar));
-                    // }
+                    if(user.avatar){
+                        console.log(user.avatar);
+                        fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+                    }
                   
                     //this is the path of the uploaded file into the avatar filled in the user
                     user.avatar= User.avatarPath + '/' + req.file.filename;

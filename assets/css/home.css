@@ -32,8 +32,7 @@
         #post-layout .container1 .create-post .posts ul {
           list-style: none;
           margin: 0;
-          padding: 0;
-          padding: 30px 0px 30px 0px; }
+          padding: 0; }
       #post-layout .container1 .create-post #new-post-form {
         width: 90%;
         margin: 0;
@@ -43,7 +42,8 @@
         flex-direction: row; }
         #post-layout .container1 .create-post #new-post-form #post-text {
           width: 80%;
-          border-radius: 5px; }
+          border-radius: 5px;
+          resize: vertical; }
           #post-layout .container1 .create-post #new-post-form #post-text:focus {
             outline: none; }
           #post-layout .container1 .create-post #new-post-form #post-text::placeholder {

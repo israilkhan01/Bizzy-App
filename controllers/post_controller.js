@@ -1,12 +1,37 @@
 const Post=require('../models/post');
-const Comment=require('../models/comment')
+const Comment=require('../models/comment');
+const fs=require('fs');
+const path=require('path');
+
 module.exports.create= async function(req,res){
     try{
-        
+
         let post =await Post.create({
             content:req.body.content,
             user:req.user._id,
+            postImage:""
         });
+        await Post.uploadedAvatar(req,res,function(err){
+                
+            if(err){console.log('****multer error:',err); }
+
+            console.log("req---****----",req.file);
+            console.log("req---****----",Post.avatarPath);
+
+          
+            if(req.file){
+                // if(user.avatar){
+                //     console.log(user.avatar);
+                //     fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+                // }
+              
+                //this is the path of the uploaded file into the avatar filled in the user
+                post.postImage= Post.avatarPath + '/' + req.file.filename;
+            }
+            post.save();
+           
+        });
+
         await post.populate({path:'user'}).execPopulate();
         if(req.xhr){
             return res.status(200).json({
