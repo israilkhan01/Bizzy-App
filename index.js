@@ -1,6 +1,7 @@
 const express =require("express");
 const app=express();
 const port= 8000;
+const env=require('./config/environment');
 const expressLayouts=require('express-ejs-layouts');
 var cookieParser = require('cookie-parser');
 const db=require('./config/mongoose');
@@ -17,12 +18,12 @@ const customMware=require('./config/middleware');
 //setup a chat server used with socket.io
 const chatserver=require('http').Server(app);
 const chatsockets=require('./config/chat_sockets').chatsockets(chatserver);
-
+const path=require('path');
 chatserver.listen(5000);
 console.log("chat server is listening on port:5000")
 app.use(sassMiddleware({
-  src:'./assets/scss',
-  dest:'./assets/css',
+  src:path.join(__dirname,env.static_path,'/scss'),
+  dest:path.join(__dirname,env.static_path,'/css'),
   debug:true,
   outputStyle:'extended',
   prefix:'/css'
@@ -30,7 +31,7 @@ app.use(sassMiddleware({
 app.use(express.urlencoded());
 app.use(cookieParser());
 //use express router
-app.use(express.static('./assets'))
+app.use(express.static(env.static_path));
 //make the uploads path available to the browser
 app.use('/uploads',express.static(__dirname + '/uploads'));
 
@@ -48,7 +49,7 @@ app.set('views','./views');
 app.use(session({
     name:'Bizzy',
     //TODO change the secret before the deployment in production mode
-    secret:'Aliyreal',
+    secret:env.session_cokkie_key,
     saveUninitialized:false,
     resave:false,
     cookie:{
