@@ -21,7 +21,25 @@ const development={
     jwt_Secret:'bizzy',
 
 }
+//kaoschats
 const production={
-    name:"production"
+    name:process.env.Bizzy_Environment,
+    static_path:process.env.Bizzy_asset_path,
+    session_cokkie_key:process.env.Bizzy_session_cokkie_key,
+     db:process.env.Bizzy_DB,
+     smtp:{
+        service:'gmail',
+        host:'smtp@gmail.com',
+        port:587,
+        secure:false,
+        auth:{
+            user:process.env.Bizzy_Gmail_username,
+            pass:process.env.Bizzy_Email_password,
+        }
+    },
+    Google_clientID:process.env.Bizzy_Google_clientID,
+    Google_clientSecret:process.env.Bizzy_Google_clientSecret,
+    Google_callbackURL:process.env.Bizzy_Google_callbackURL,
+    jwt_Secret:process.env.Bizzy_JWT_SECRET,
 }
 module.exports=development;
