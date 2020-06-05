@@ -19,6 +19,7 @@ const customMware=require('./config/middleware');
 const chatserver=require('http').Server(app);
 const chatsockets=require('./config/chat_sockets').chatsockets(chatserver);
 const path=require('path');
+require('dotenv').config();
 chatserver.listen(5000);
 console.log("chat server is listening on port:5000")
 app.use(sassMiddleware({
@@ -44,7 +45,7 @@ app.set('layout extractScripts',true)
 //setting up view Engine
 app.set('view engine','ejs');
 app.set('views','./views');
-
+console.log("*************",process.env.Bizzy_DB);
 //mongo store is used to store the session cookie in the db bcz unlike it will expire when server rst.
 app.use(session({
     name:'Bizzy',

@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
 const env=require('./environment');
+console.log(env);
 mongoose.connect(`mongodb://localhost/${env.db}`). catch((error)=>handleError(error));
 
 
