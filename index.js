@@ -22,26 +22,25 @@ const path=require('path');
 require('dotenv').config();
 chatserver.listen(5000);
 console.log("chat server is listening on port:5000")
-app.use(sassMiddleware({
-  src:path.join(__dirname,env.static_path,'/scss'),
-  dest:path.join(__dirname,env.static_path,'/css'),
-  debug:true,
-  outputStyle:'extended',
-  prefix:'/css'
-}));
+if(env.name=='development'){
+    app.use(sassMiddleware({
+        src:path.join(__dirname,env.static_path,'/scss'),
+        dest:path.join(__dirname,env.static_path,'/css'),
+        debug:true,
+        outputStyle:'extended',
+        prefix:'/css'
+      }));
+}
 app.use(express.urlencoded());
 app.use(cookieParser());
 //use express router
 app.use(express.static(env.static_path));
 //make the uploads path available to the browser
 app.use('/uploads',express.static(__dirname + '/uploads'));
-
 app.use(expressLayouts);
 //extracts layouts and scripts from subpages into the layout
 app.set('layout extractStyles',true)
 app.set('layout extractScripts',true)
-
-
 //setting up view Engine
 app.set('view engine','ejs');
 app.set('views','./views');
