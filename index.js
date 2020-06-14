@@ -2,6 +2,7 @@ const express =require("express");
 const app=express();
 const port= 8000;
 const env=require('./config/environment');
+const logger=require('morgan');
 const expressLayouts=require('express-ejs-layouts');
 var cookieParser = require('cookie-parser');
 const db=require('./config/mongoose');
@@ -37,6 +38,8 @@ app.use(cookieParser());
 app.use(express.static(env.static_path));
 //make the uploads path available to the browser
 app.use('/uploads',express.static(__dirname + '/uploads'));
+//morgan logger 
+app.use(logger(env.morgan.mode,env.morgan.options));
 app.use(expressLayouts);
 //extracts layouts and scripts from subpages into the layout
 app.set('layout extractStyles',true)
@@ -44,7 +47,7 @@ app.set('layout extractScripts',true)
 //setting up view Engine
 app.set('view engine','ejs');
 app.set('views','./views');
-console.log("*************",process.env.Bizzy_DB);
+// console.log("*************",process.env.Bizzy_JWT_SECRET);
 //mongo store is used to store the session cookie in the db bcz unlike it will expire when server rst.
 app.use(session({
     name:'Bizzy',

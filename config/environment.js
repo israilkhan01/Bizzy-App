@@ -1,11 +1,27 @@
 //this file contains the environments for production and development purposes
-require('dotenv').config();
+const fs=require('fs');
+const rfs=require('rotating-file-stream');
+const path=require('path');
+const dotenv=require('dotenv');
+const logDirectory=path.join(__dirname,'../production_logs');
+fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 
+const accessLogStream=rfs.createStream('access.log',{
+    interval:'1d',
+    path:logDirectory
+});
+console.log(path.join(__dirname,'../'))
+const result=dotenv.config({path:__dirname+'/../.env'});
+if (result.error) {
+    throw result.error
+  }
+   
+  console.log(result.parsed)
 const development={
      name:'devlopment',
      static_path:'./assets',
      session_cokkie_key:'somethingYouNeverKnow',
-     db:process.env.Bizzy_DB,
+     db:'Bizzy_development',
      smtp:{
         service:'gmail',
         host:'smtp@gmail.com',
@@ -20,8 +36,13 @@ const development={
     Google_clientSecret:'-GgJH7vojfWE-CFjd8EBAsF2',
     Google_callbackURL:'http://localhost:8000/users/auth/google/callback',
     jwt_Secret:'bizzy',
+    morgan:{
+        mode:'dev',
+        options:{stream:accessLogStream}
+    }
 
 }
+
 //kaoschats
 const production={
     name:'production',
@@ -42,14 +63,16 @@ const production={
     Google_clientSecret:process.env.Bizzy_Google_clientSecret,
     Google_callbackURL:process.env.Bizzy_Google_callbackURL,
     jwt_Secret:process.env.Bizzy_JWT_SECRET,
+    morgan:{
+        mode:'combined',
+        options:{stream:accessLogStream}
+    }
 }
-// module.exports=development;
-module.exports=eval(process.env.Bizzy_Environment) == undefined ? development : eval(process.env.Bizzy_Environment);
 
-// Bizzy_Email_password='My name@1998',
-// Bizzy_Gmail_username='israilkhan.a111@gmail.com',
-// Bizzy_Google_callbackURL= 'http://kaoschats.com/users/auth/google/callback',
-// Bizzy_Google_clientID= '122581324455-1mrb67rp0blhoqhgv5hei6lkasfnijmg.apps.googleusercontent.com',
-// Bizzy_Google_clientSecret= '-GgJH7vojfWE-CFjd8EBAsF2',
-// Bizzy_JWT_SECRET='975R1VmtCqVsdXtUVWf4CV958RNPgjx9',
-// Bizzy_session_cokkie_key='IN9kss8Pj9XRq8KLdnCmOJGHHteBqXsJ',
+console.log("!!!!!_____----",process.env.NODE_ENV,"------");
+if(eval(process.env.NODE_ENV)==production){
+    module.exports=production;
+}else{
+    module.exports=development;
+}
+
