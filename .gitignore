@@ -3,3 +3,4 @@ uploads/
 .env
 production_logs/
 public/
+package-lock.json
