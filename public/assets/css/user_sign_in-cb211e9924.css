@@ -1,0 +1,95 @@
+main {
+  text-align: center;
+  display: flex;
+  padding: 130px;
+  background-image: url("../images/marshmello_logo-wallpaper-3554x1999.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between; }
+  main .title-name {
+    min-width: 400px;
+    max-width: 535px;
+    height: 450px;
+    background-color: #000000c7;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px; }
+    main .title-name .Title {
+      padding: 8px;
+      background-color: #000000c7;
+      color: white; }
+    main .title-name .description {
+      color: white; }
+  main .sign-in {
+    position: relative;
+    margin: 10px;
+    height: 470px;
+    width: 400px;
+    padding: 20px 20px 50px 20px;
+    background-color: #000000c7;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block; }
+    main .sign-in .sign-in-part {
+      padding: 20px;
+      border: 0.1px solid white;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 5px 2px white; }
+      main .sign-in .sign-in-part h1 {
+        margin: 0;
+        font-family: cursive;
+        padding-bottom: 30px;
+        color: white; }
+      main .sign-in .sign-in-part .form-div {
+        width: 100%;
+        position: relative; }
+        main .sign-in .sign-in-part .form-div .sign-in-form {
+          position: relative;
+          display: inline-block;
+          padding: 8px;
+          width: 350px;
+          border: 0.5px white solid;
+          border-radius: 10px; }
+          main .sign-in .sign-in-part .form-div .sign-in-form input {
+            width: 100%;
+            height: 35px;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: 500;
+            border: 0;
+            border-radius: 5px; }
+          main .sign-in .sign-in-part .form-div .sign-in-form #email {
+            margin-bottom: 10px; }
+          main .sign-in .sign-in-part .form-div .sign-in-form #pass {
+            margin-bottom: 10px; }
+          main .sign-in .sign-in-part .form-div .sign-in-form #submit {
+            background-color: grey;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer; }
+        main .sign-in .sign-in-part .form-div .google-sign {
+          height: 60px; }
+          main .sign-in .sign-in-part .form-div .google-sign a {
+            color: blanchedalmond; }
+            main .sign-in .sign-in-part .form-div .google-sign a::after {
+              content: " Sign in with Google";
+              font-weight: 700;
+              font-size: 20px; }
+        main .sign-in .sign-in-part .form-div .forgot-pass a {
+          color: white; }
+    main .sign-in .signing-up {
+      margin-top: 15px;
+      border: 0.1px solid white;
+      color: white;
+      padding: 13px;
+      box-shadow: 0px 0px 5px 2px white; }
+      main .sign-in .signing-up a {
+        color: Red;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none; }
