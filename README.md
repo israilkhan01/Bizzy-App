@@ -1,15 +1,16 @@
 # Bizzy-App
 
-<h3>This App is under process!</h3>
+**Description** : This is  Social Media webApp.
+<br>
+App is developed using **Node.js** and the framework is **Express**.
 
-Description: This is  Social Media webApp.
-App is developed using <h4> Node.js</h4> and the framework is <h4>Express</h4>
 
-<h4>Sign IN page </h4>
+
+<h4>Signing in </h4>
 
 ![](gitimages/signin.png)
 
-<h4> sign Up Page</h4>
+<h4> sign Up</h4>
 
 ![](gitimages/signup.png)
 
