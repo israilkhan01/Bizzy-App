@@ -36,4 +36,4 @@ App is developed using **Node.js** and the framework is **Express**.
 
 ![](gitimages/signup.png)
 
-<h4> Home Page</h4> styling under process
+<h4> Home Page</h4> FrontEnd under process
